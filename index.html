@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRWN — The home for every textured hair journey</title>
+  <meta
+    name="description"
+    content="CRWN is the digital home for textured hair: inspiration, education, and trusted professionals, all in one place."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#" class="logo">crwn<span>.</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#discover">Discover</a>
+        <a href="#hair">Your hair</a>
+        <a href="#professionals">Professionals</a>
+        <a href="#why">Why CRWN</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#" class="link-plain">Log in</a>
+        <a href="#waitlist" class="btn btn--dark">Join the waitlist</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow">CRWN</p>
+        <h1>The home for every<br />textured hair journey.</h1>
+        <p class="hero__sub">
+          Inspiration, education, and trusted professionals, all in one place.
+        </p>
+        <div class="hero__cta">
+          <a href="#waitlist" class="btn btn--dark">Join the waitlist</a>
+          <a href="#how" class="btn btn--outline">See how it works</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="palette" aria-label="Textured hair styles">
+          <li class="swatch swatch--braids"><span>Knotless Braids</span></li>
+          <li class="swatch swatch--locs"><span>Locs</span></li>
+          <li class="swatch swatch--silk"><span>Silk Press</span></li>
+          <li class="swatch swatch--wash"><span>Wash &amp; Go</span></li>
+          <li class="swatch swatch--color"><span>Color</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Audience split ===== -->
+    <section class="section audiences" id="why">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <h2>Built for everyone shaping textured hair.</h2>
+          <p>Tools, inspiration, and community for your journey, however you show up.</p>
+        </div>
+
+        <div class="audiences__grid">
+          <article class="card card--light">
+            <p class="card__label">For your hair</p>
+            <h3>Clients</h3>
+            <p>Discover styles and book professionals you trust.</p>
+            <a href="#" class="link-arrow">Explore the app for clients &rarr;</a>
+          </article>
+
+          <article class="card card--dark" id="professionals">
+            <p class="card__label card__label--accent">For your craft</p>
+            <h3>Professionals</h3>
+            <p>Showcase your work, manage bookings, and get paid.</p>
+            <a href="#" class="link-arrow">Explore the app for professionals &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature: Discover ===== -->
+    <section class="section feature" id="discover">
+      <div class="container feature__inner">
+        <div class="feature__text">
+          <p class="eyebrow">Discover</p>
+          <h2>Inspiration that looks like you.</h2>
+          <p>
+            Explore curls, coils, locs, braids, and more, all made for your
+            texture. Save what inspires you and come back anytime.
+          </p>
+          <a href="#" class="link-arrow">Explore the feed &rarr;</a>
+        </div>
+        <div class="feature__media">
+          <div class="phone">
+            <div class="phone__screen">
+              <span class="phone__tag">Explore</span>
+              <div class="phone__grid">
+                <span class="tile tile--braids"></span>
+                <span class="tile tile--silk"></span>
+                <span class="tile tile--wash"></span>
+                <span class="tile tile--locs wide"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature: Know your hair ===== -->
+    <section class="section feature feature--alt" id="hair">
+      <div class="container feature__inner feature__inner--reverse">
+        <div class="feature__media">
+          <div class="phone">
+            <div class="phone__screen">
+              <span class="phone__tag">Profile</span>
+              <dl class="phone__spec">
+                <div><dt>Curl pattern</dt><dd>4B / 4C</dd></div>
+                <div><dt>Porosity</dt><dd>High</dd></div>
+                <div><dt>Density</dt><dd>Medium</dd></div>
+                <div><dt>Scalp type</dt><dd>Dry</dd></div>
+                <div><dt>Goal</dt><dd>Protective styling</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="feature__text">
+          <p class="eyebrow">Know your hair</p>
+          <h2>Understanding your hair changes everything.</h2>
+          <p>
+            Your private Hair Profile captures what makes your hair yours, from
+            curl pattern to porosity, so every recommendation fits.
+          </p>
+          <a href="#" class="link-arrow">Build your profile &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature: Find professionals ===== -->
+    <section class="section feature">
+      <div class="container feature__inner">
+        <div class="feature__text">
+          <p class="eyebrow">Find professionals</p>
+          <h2>Find someone who gets your hair.</h2>
+          <p>
+            Browse portfolios, read Crown Ratings, and book professionals who
+            specialize in your texture and style.
+          </p>
+          <a href="#" class="link-arrow">Browse professionals &rarr;</a>
+        </div>
+        <div class="feature__media">
+          <div class="phone">
+            <div class="phone__screen">
+              <span class="phone__tag">Upcoming</span>
+              <ul class="phone__list">
+                <li><strong>Maya K.</strong> &middot; Knotless braids<span>Thu &middot; 10:00am &middot; 3.5 hrs</span></li>
+                <li><strong>Devon L.</strong> &middot; Silk press<span>Fri &middot; 1:00pm &middot; Deposit paid</span></li>
+                <li><strong>Amara J.</strong> &middot; Locs retwist<span>Sat &middot; 11:30am &middot; 2 hrs</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature: For your craft ===== -->
+    <section class="section feature feature--alt">
+      <div class="container feature__inner feature__inner--reverse">
+        <div class="feature__media">
+          <div class="phone">
+            <div class="phone__screen">
+              <span class="phone__tag">Import services</span>
+              <ul class="phone__rows">
+                <li>StyleSeat<span>Connect</span></li>
+                <li>Vagaro<span>Connect</span></li>
+                <li>Instagram<span>Connect</span></li>
+                <li>Manual entry<span>Add service</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="feature__text">
+          <p class="eyebrow">For your craft</p>
+          <h2>Set up your profile in minutes.</h2>
+          <p>
+            Import services from StyleSeat, Vagaro, or Instagram, then manage
+            bookings and get paid, all in one place.
+          </p>
+          <a href="#" class="link-arrow">Set up your profile &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Community ===== -->
+    <section class="section community">
+      <div class="container">
+        <p class="eyebrow">Community</p>
+        <h2>It&rsquo;s more than appointments.</h2>
+        <p class="community__quote">
+          Hair is creativity, confidence, and community. It&rsquo;s our culture.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Final CTA ===== -->
+    <section class="section cta" id="waitlist">
+      <div class="container">
+        <p class="eyebrow">CRWN</p>
+        <h2>Your next chapter starts here.</h2>
+        <p>Join thousands discovering inspiration and professionals they trust.</p>
+        <div class="hero__cta">
+          <a href="#" class="btn btn--dark">Join the waitlist</a>
+          <a href="#" class="btn btn--outline">For professionals</a>
+        </div>
+        <p class="cta__note">Every crown tells a story.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">crwn<span>.</span></a>
+        <p>
+          The digital home for textured hair: bringing inspiration, education,
+          trusted professionals, and community together in one place.
+        </p>
+      </div>
+
+      <nav class="footer__col" aria-label="Explore">
+        <p class="footer__heading">Explore</p>
+        <a href="#discover">Discover</a>
+        <a href="#hair">Your hair</a>
+        <a href="#professionals">Professionals</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Company">
+        <p class="footer__heading">Company</p>
+        <a href="#why">Why CRWN</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; 2026 CRWN. Every crown tells a story.</p>
+      <p><a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
