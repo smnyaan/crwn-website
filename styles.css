@@ -14,7 +14,6 @@
   --accent-2:  #c98a2c;
   --maroon:    #6f231b;
   --olive:     #8a7440;
-  --dark-fg-soft: #b2ab9c;
 
   --braids: #6f2725;
   --locs:   #c06a2b;
@@ -142,21 +141,15 @@ a { color: inherit; text-decoration: none; }
 .link-arrow:hover { gap: 0.65rem; color: var(--accent); border-color: var(--accent); }
 
 /* ===== Header =====
-   A dark bar (rather than a light one like the rest of the page) so the
-   wordmark and nav read the way they do in the reference app: bold pale
-   logo, evenly spaced light-gray links, against a deep forest ground with
-   its own soft warm bloom and grain. */
+   Same light ground as the rest of the page, just with the bolder wordmark
+   and more generously spaced nav labels. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--dark);
-  background-image:
-    var(--grain),
-    radial-gradient(420px 200px at 88% 120%, color-mix(in srgb, var(--accent-2) 30%, transparent), transparent 70%);
-  background-repeat: repeat, no-repeat;
-  background-blend-mode: overlay, normal;
-  border-bottom: 1px solid color-mix(in srgb, #000 25%, var(--dark));
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 .header__inner {
   display: flex;
@@ -169,19 +162,19 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--bg);
+  color: var(--ink);
 }
-.logo span { color: var(--accent-2); }
+.logo span { color: var(--accent); }
 
 .nav { display: flex; gap: 2.5rem; }
-.nav a { font-size: 0.95rem; color: var(--dark-fg-soft); position: relative; }
-.nav a:hover { color: var(--bg); }
+.nav a { font-size: 0.95rem; color: var(--ink-soft); position: relative; }
+.nav a:hover { color: var(--ink); }
 .nav a::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -6px;
   height: 1px;
-  background: var(--accent-2);
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.25s var(--ease);
@@ -190,14 +183,6 @@ a { color: inherit; text-decoration: none; }
 
 .header__actions { display: flex; align-items: center; gap: 1.25rem; }
 .header__actions .btn { padding: 0.65rem 1.25rem; }
-.header__actions .link-plain { color: var(--dark-fg-soft); }
-.header__actions .link-plain:hover { color: var(--bg); }
-.header__actions .btn--dark {
-  background: var(--bg);
-  color: var(--dark);
-  box-shadow: none;
-}
-.header__actions .btn--dark:hover { box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.45); }
 
 .nav-toggle {
   display: none;
@@ -211,7 +196,7 @@ a { color: inherit; text-decoration: none; }
 .nav-toggle span {
   width: 22px;
   height: 2px;
-  background: var(--bg);
+  background: var(--ink);
   transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
 }
 .site-header.is-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -613,8 +598,8 @@ a { color: inherit; text-decoration: none; }
     right: 0;
     flex-direction: column;
     gap: 0;
-    background: var(--dark);
-    border-bottom: 1px solid color-mix(in srgb, #000 25%, var(--dark));
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
     padding: 0.5rem 0;
   }
   .site-header.is-open .nav a { padding: 0.85rem var(--pad); }
