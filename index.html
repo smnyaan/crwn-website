@@ -36,8 +36,7 @@
       <a href="#" class="logo">crwn<span>.</span></a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#discover">Discover</a>
-        <a href="#hair">Your hair</a>
+        <a href="#clients">Clients</a>
         <a href="#providers">Providers</a>
         <a href="#why">Why CRWN</a>
       </nav>
@@ -109,7 +108,7 @@
             </span>
             <p class="card__label">For your hair</p>
             <h3>clients</h3>
-            <a href="#waitlist" class="pill-cta pill-cta--tan">Explore for clients &rarr;</a>
+            <a href="#clients" class="pill-cta pill-cta--tan">Explore for clients &rarr;</a>
           </article>
 
           <article class="card card--light reveal">
@@ -118,33 +117,55 @@
             </span>
             <p class="card__label">For your craft</p>
             <h3>providers</h3>
-            <a href="#waitlist" class="pill-cta pill-cta--tan">Explore for providers &rarr;</a>
+            <a href="#providers" class="pill-cta pill-cta--tan">Explore for providers &rarr;</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== 01 — Discover ===== -->
-    <section class="section feature" id="discover">
+    <!-- ===== 01 — Clients ===== -->
+    <section class="section feature" id="clients" data-tab-group>
       <div class="container feature__inner">
         <div class="feature__text reveal">
-          <p class="eyebrow">01 &mdash; Discover</p>
-          <h2>Find what works for you.</h2>
-          <p>
-            Explore styles, get inspired, and find providers who know
-            textured hair.
-          </p>
+          <p class="eyebrow">01 &mdash; Clients</p>
+          <h2>Everything for your hair, in one place.</h2>
+          <div class="tabs" role="tablist" aria-label="Client features">
+            <button type="button" class="tab-pill tab-pill--cream is-active" data-tab="discover" role="tab" aria-selected="true">Discover</button>
+            <button type="button" class="tab-pill tab-pill--olive" data-tab="your-hair" role="tab" aria-selected="false">Your hair</button>
+            <button type="button" class="tab-pill tab-pill--rust" data-tab="book" role="tab" aria-selected="false">Book</button>
+          </div>
           <a href="#waitlist" class="pill-cta pill-cta--rust">Explore CRWN &rarr;</a>
         </div>
         <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
-              <span class="phone__tag">Explore</span>
-              <div class="phone__grid">
-                <span class="tile tile--braids"></span>
-                <span class="tile tile--silk"></span>
-                <span class="tile tile--wash"></span>
-                <span class="tile tile--locs wide"></span>
+              <div class="tab-panel is-active" data-panel="discover">
+                <span class="phone__tag">Explore</span>
+                <div class="phone__grid">
+                  <span class="tile tile--braids"></span>
+                  <span class="tile tile--silk"></span>
+                  <span class="tile tile--wash"></span>
+                  <span class="tile tile--locs wide"></span>
+                </div>
+              </div>
+              <div class="tab-panel" data-panel="your-hair">
+                <span class="phone__tag">Profile</span>
+                <dl class="phone__spec">
+                  <div><dt>Curl pattern</dt><dd>4B / 4C</dd></div>
+                  <div><dt>Porosity</dt><dd>High</dd></div>
+                  <div><dt>Density</dt><dd>Medium</dd></div>
+                  <div><dt>Scalp type</dt><dd>Dry</dd></div>
+                  <div><dt>Goal</dt><dd>Protective styling</dd></div>
+                </dl>
+              </div>
+              <div class="tab-panel" data-panel="book">
+                <span class="phone__tag">Upcoming</span>
+                <dl class="phone__spec">
+                  <div><dt>Provider</dt><dd>Amara J.</dd></div>
+                  <div><dt>Service</dt><dd>Locs retwist</dd></div>
+                  <div><dt>When</dt><dd>Sat &middot; 11:30am</dd></div>
+                  <div><dt>Deposit</dt><dd>Paid</dd></div>
+                </dl>
               </div>
             </div>
           </div>
@@ -152,70 +173,77 @@
       </div>
     </section>
 
-    <!-- ===== 02 — Your hair ===== -->
-    <section class="section feature feature--alt" id="hair">
+    <!-- ===== 02 — Providers ===== -->
+    <section class="section feature feature--alt" id="providers" data-tab-group>
       <div class="container feature__inner feature__inner--reverse">
         <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
-              <span class="phone__tag">Profile</span>
-              <dl class="phone__spec">
-                <div><dt>Curl pattern</dt><dd>4B / 4C</dd></div>
-                <div><dt>Porosity</dt><dd>High</dd></div>
-                <div><dt>Density</dt><dd>Medium</dd></div>
-                <div><dt>Scalp type</dt><dd>Dry</dd></div>
-                <div><dt>Goal</dt><dd>Protective styling</dd></div>
-              </dl>
+              <div class="tab-panel is-active" data-panel="profile">
+                <span class="phone__tag">Profile</span>
+                <dl class="phone__spec">
+                  <div><dt>Name</dt><dd>Amara J.</dd></div>
+                  <div><dt>Specialty</dt><dd>Locs &amp; retwists</dd></div>
+                  <div><dt>Rating</dt><dd>4.9 (128)</dd></div>
+                  <div><dt>Location</dt><dd>Brooklyn, NY</dd></div>
+                </dl>
+              </div>
+              <div class="tab-panel" data-panel="services">
+                <span class="phone__tag">Import services</span>
+                <ul class="phone__rows">
+                  <li>StyleSeat<span>Connect</span></li>
+                  <li>Vagaro<span>Connect</span></li>
+                  <li>Instagram<span>Connect</span></li>
+                  <li>Manual entry<span>Add service</span></li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="calendar">
+                <span class="phone__tag">Calendar</span>
+                <ul class="phone__rows">
+                  <li>Mon 9<span>2 bookings</span></li>
+                  <li>Tue 10<span>Open</span></li>
+                  <li>Wed 11<span>4 bookings</span></li>
+                  <li>Thu 12<span>1 booking</span></li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="bookings">
+                <span class="phone__tag">Upcoming</span>
+                <ul class="phone__list">
+                  <li><strong>Maya K.</strong> &middot; Knotless braids<span>Thu &middot; 10:00am &middot; 3.5 hrs</span></li>
+                  <li><strong>Devon L.</strong> &middot; Silk press<span>Fri &middot; 1:00pm &middot; Deposit paid</span></li>
+                  <li><strong>Amara J.</strong> &middot; Locs retwist<span>Sat &middot; 11:30am &middot; 2 hrs</span></li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="payments">
+                <span class="phone__tag">Payments</span>
+                <dl class="phone__spec">
+                  <div><dt>This week</dt><dd>$420</dd></div>
+                  <div><dt>Pending payout</dt><dd>$180</dd></div>
+                  <div><dt>Last payout</dt><dd>Mar 3</dd></div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
         <div class="feature__text reveal">
-          <p class="eyebrow">02 &mdash; Your hair</p>
-          <h2>Your hair, understood.</h2>
-          <p>
-            Build a Hair Profile around your texture, porosity, density,
-            and goals.
-          </p>
-          <a href="#waitlist" class="pill-cta pill-cta--olive">Build your profile &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 03 — Providers ===== -->
-    <section class="section feature feature--alt" id="providers">
-      <div class="container feature__inner feature__inner--reverse">
-        <div class="feature__media reveal">
-          <div class="phone">
-            <div class="phone__screen">
-              <span class="phone__tag">Import services</span>
-              <ul class="phone__rows">
-                <li>StyleSeat<span>Connect</span></li>
-                <li>Vagaro<span>Connect</span></li>
-                <li>Instagram<span>Connect</span></li>
-                <li>Manual entry<span>Add service</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="feature__text reveal">
-          <p class="eyebrow">03 &mdash; Providers</p>
+          <p class="eyebrow">02 &mdash; Providers</p>
           <h2>Your craft. Your business. One place.</h2>
-          <div class="feature__pills">
-            <span class="tag tag--cream">Profile</span>
-            <span class="tag tag--olive">Services</span>
-            <span class="tag tag--rust">Calendar</span>
-            <span class="tag tag--maroon">Bookings</span>
-            <span class="tag tag--profile">Payments</span>
+          <div class="tabs" role="tablist" aria-label="Provider features">
+            <button type="button" class="tab-pill tab-pill--cream is-active" data-tab="profile" role="tab" aria-selected="true">Profile</button>
+            <button type="button" class="tab-pill tab-pill--olive" data-tab="services" role="tab" aria-selected="false">Services</button>
+            <button type="button" class="tab-pill tab-pill--rust" data-tab="calendar" role="tab" aria-selected="false">Calendar</button>
+            <button type="button" class="tab-pill tab-pill--maroon" data-tab="bookings" role="tab" aria-selected="false">Bookings</button>
+            <button type="button" class="tab-pill tab-pill--tan" data-tab="payments" role="tab" aria-selected="false">Payments</button>
           </div>
           <a href="#waitlist" class="pill-cta pill-cta--maroon">CRWN for providers &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== 04 — Why CRWN ===== -->
+    <!-- ===== 03 — Why CRWN ===== -->
     <section class="section community" id="why">
       <div class="container reveal">
-        <p class="eyebrow">04 &mdash; Why CRWN</p>
+        <p class="eyebrow">03 &mdash; Why CRWN</p>
         <h2>More than a crown.</h2>
         <p>
           Our hair is part of how we express ourselves, how we show up, and
@@ -267,8 +295,7 @@
 
       <nav class="footer__col" aria-label="Explore">
         <p class="footer__heading">Explore</p>
-        <a href="#discover">Discover</a>
-        <a href="#hair">Your hair</a>
+        <a href="#clients">Clients</a>
         <a href="#providers">Providers</a>
       </nav>
 

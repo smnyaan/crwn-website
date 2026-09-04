@@ -18,6 +18,28 @@ header.querySelectorAll('.nav a').forEach((link) => {
   });
 });
 
+// Feature tabs: clicking a pill swaps the matching phone mockup panel
+// beside it, scoped to its own section so Clients and Providers tab
+// independently.
+document.querySelectorAll('[data-tab-group]').forEach((group) => {
+  const tabs = group.querySelectorAll('.tab-pill');
+  const panels = group.querySelectorAll('.tab-panel');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      tabs.forEach((t) => {
+        t.classList.toggle('is-active', t === tab);
+        t.setAttribute('aria-selected', String(t === tab));
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle('is-active', panel.dataset.panel === target);
+      });
+    });
+  });
+});
+
 // Reveal sections as they enter the viewport
 const revealTargets = document.querySelectorAll('.reveal');
 

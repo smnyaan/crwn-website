@@ -187,12 +187,45 @@ a { color: inherit; text-decoration: none; }
 .pill-cta--cream  { background: var(--bg); color: var(--ink); }
 .pill-cta--tan    { background: #8a6a3a; color: #fff; }
 
-.feature__pills {
+/* ===== Tabs =====
+   Clickable pills that swap the phone mockup content beside them. Each
+   pill keeps its own fixed brand color at all times (like the app's own
+   tag palette); the active one is lifted with a shadow and a light ring
+   so selection reads clearly without losing that color identity. */
+.tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   margin: 1.4rem 0 0.4rem;
 }
+.tab-pill {
+  font-family: var(--sans);
+  cursor: pointer;
+  border: 0;
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  box-shadow: none;
+  transition: opacity 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.tab-pill:hover { opacity: 0.85; }
+.tab-pill.is-active {
+  opacity: 1;
+  box-shadow: 0 10px 22px -10px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+.tab-pill--cream  { background: var(--bg); color: var(--ink); }
+.tab-pill--olive  { background: var(--olive); color: #fff; }
+.tab-pill--rust   { background: var(--accent); color: #fff; }
+.tab-pill--maroon { background: var(--maroon); color: #fff; }
+.tab-pill--tan    { background: #8a6a3a; color: #fff; }
+
+.tab-panel { display: none; }
+.tab-panel.is-active { display: block; }
 
 /* ===== Header =====
    Same light ground as the rest of the page, just with the bolder wordmark
