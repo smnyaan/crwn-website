@@ -185,6 +185,7 @@ a { color: inherit; text-decoration: none; }
 .pill-cta--olive  { background: var(--olive); color: #fff; }
 .pill-cta--maroon { background: var(--maroon); color: #fff; }
 .pill-cta--cream  { background: var(--bg); color: var(--ink); }
+.pill-cta--tan    { background: #8a6a3a; color: #fff; }
 
 .feature__pills {
   display: flex;
@@ -379,51 +380,66 @@ a { color: inherit; text-decoration: none; }
 .tag--tan         { background: #8a6a3a; color: #fff; }
 .tag--champagne   { background: #e8ddd0; color: var(--ink); }
 
-/* ===== Audiences ===== */
+/* ===== Audiences =====
+   Cards are a soft, warm near-white — a blend of the page's own cream
+   rather than flat white — so they sit into the grainy background
+   instead of cutting a harsh rectangle against it. A wide, soft amber
+   glow (echoing the hero style-cards) sits behind each one, and a faint
+   grain layer on the card itself keeps the texture continuous. */
 .audiences__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 24px;
 }
 .card {
-  border-radius: 20px;
-  padding: 2.8rem 2.4rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 26px;
+  padding: 3rem 2.4rem;
   text-align: center;
-  transition: transform 0.3s var(--ease);
+  background: color-mix(in srgb, var(--bg) 55%, #fff 45%);
+  border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  box-shadow: 0 30px 70px -32px rgba(179, 93, 43, 0.45), 0 6px 22px -10px rgba(93, 31, 31, 0.15);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.card:hover { transform: translateY(-4px); }
-.card h3 { margin: 0.5rem 0 1.4rem; }
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--grain);
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+.card > * { position: relative; z-index: 1; }
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 90px -32px rgba(179, 93, 43, 0.55), 0 8px 26px -10px rgba(93, 31, 31, 0.2);
+}
+.card h3 {
+  margin: 0.35rem 0 1.7rem;
+  font-size: 1.9rem;
+  color: var(--maroon);
+}
 .card__label {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--olive);
+  color: #5d1f1f;
+  margin-top: 0.9rem;
 }
-.card--light { background: #e8ddd0; }
-.card--dark  { background: var(--brown-dark); }
-.card--dark h3 { color: #fff; }
-.card--dark p  { color: #cdbfae; }
-.card__label--accent { color: var(--accent); }
 .card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  margin-bottom: 1.4rem;
+  width: 40px;
+  height: 40px;
+  color: #b35d2b;
 }
-.card__icon svg { width: 26px; height: 26px; }
-.card__icon--ochre     { background: #b35d2b; color: #fff; }
-.card__icon--champagne { background: #e8ddd0; color: var(--brown-dark); }
-.card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.4rem;
-}
+.card__icon svg { width: 34px; height: 34px; }
 
 /* ===== Feature rows ===== */
 .feature--alt {
