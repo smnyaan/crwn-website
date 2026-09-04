@@ -120,18 +120,20 @@ a { color: inherit; text-decoration: none; }
   padding: 0.9rem 1.7rem;
   border-radius: 999px;
   font-size: 0.92rem;
-  font-weight: 500;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease), opacity 0.2s var(--ease);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease), opacity 0.2s var(--ease);
 }
 .btn:hover { transform: translateY(-2px); }
 .btn--maroon {
-  background: var(--maroon);
+  background: #5d1f1f;
   color: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
-.btn--maroon:hover { box-shadow: 0 14px 30px -12px rgba(111, 35, 27, 0.5); }
-.btn--outline { border: 1px solid var(--ink); color: var(--ink); }
-.btn--outline:hover { background: var(--ink); color: #fff; }
+.btn--maroon:hover { box-shadow: 0 14px 30px -12px rgba(93, 31, 31, 0.5); }
+.btn--outline { background: #e8ddd0; border: 1px solid #8e683b; color: #8e683b; }
+.btn--outline:hover { background: #8e683b; color: #e8ddd0; }
 
 .link-plain { font-size: 0.92rem; color: var(--ink-soft); }
 .link-plain:hover { color: var(--ink); }
@@ -337,10 +339,11 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.tag--cream  { background: var(--bg); color: var(--ink); border: 1px solid var(--line); }
-.tag--rust   { background: var(--accent); color: #fff; }
-.tag--olive  { background: var(--olive); color: #fff; }
-.tag--maroon { background: var(--maroon); color: #fff; }
+.tag--cream   { background: var(--bg); color: var(--ink); border: 1px solid var(--line); }
+.tag--rust    { background: var(--accent); color: #fff; }
+.tag--olive   { background: var(--olive); color: #fff; }
+.tag--maroon  { background: var(--maroon); color: #fff; }
+.tag--profile { background: #b35d2b; color: #fff; }
 
 /* ===== Audiences ===== */
 .audiences__grid {
