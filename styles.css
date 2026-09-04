@@ -29,7 +29,7 @@
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,9 +37,12 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background:
-    radial-gradient(1100px 520px at 50% -8%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 60%),
-    var(--bg);
+  background-color: var(--bg);
+  background-image:
+    var(--grain),
+    radial-gradient(1100px 520px at 50% -8%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 60%);
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: overlay, normal;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
@@ -198,8 +201,10 @@ a { color: inherit; text-decoration: none; }
 .site-header.is-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ===== Fuzzy gradient + grain texture =====
-   A soft warm gradient with a layer of film-grain noise on top, used
-   sparingly on a few high-impact surfaces (hero, final CTA, swatches). */
+   Grain is a continuous layer on <body> (see above), so it reads the same
+   everywhere. This utility adds an extra local dose of it on top for a few
+   bounded, card-shaped surfaces (the style swatches) where a richer close-up
+   texture suits the smaller shape without risking a seam at its edges. */
 .texture-grain {
   position: relative;
   isolation: isolate;
@@ -211,7 +216,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   z-index: 0;
   background-image: var(--grain);
-  opacity: 0.05;
+  opacity: 0.08;
   mix-blend-mode: overlay;
   pointer-events: none;
 }
@@ -220,10 +225,14 @@ a { color: inherit; text-decoration: none; }
   z-index: 1;
 }
 
-/* ===== Hero ===== */
+/* ===== Hero =====
+   A soft radial bloom, not a hard-edged rectangle — it fades to fully
+   transparent well before the section's edges, so it blends into the page's
+   base tone (and grain) instead of cutting a visible line against whatever
+   comes next. Same approach on .cta and .feature--alt below. */
 .hero {
   padding: clamp(4rem, 9vw, 6.5rem) 0 4.5rem;
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg) 40%, color-mix(in srgb, var(--accent-2) 22%, var(--bg)) 100%);
+  background: radial-gradient(farthest-side at 50% 15%, color-mix(in srgb, var(--accent-2) 24%, transparent) 0%, transparent 68%);
 }
 .hero__inner { text-align: center; max-width: 760px; margin: 0 auto 3.75rem; }
 .hero__sub { font-size: 1.1rem; margin: 1.5rem auto 2.1rem; max-width: 460px; }
@@ -358,7 +367,9 @@ a { color: inherit; text-decoration: none; }
 .card__label--accent { color: var(--accent); }
 
 /* ===== Feature rows ===== */
-.feature--alt { background: var(--bg-alt); }
+.feature--alt {
+  background: radial-gradient(farthest-side at 50% 50%, color-mix(in srgb, var(--accent-2) 13%, transparent) 0%, transparent 74%);
+}
 .feature__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -523,7 +534,7 @@ a { color: inherit; text-decoration: none; }
 /* ===== Final CTA ===== */
 .cta {
   text-align: center;
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 45%, color-mix(in srgb, var(--accent) 20%, var(--bg-alt)) 100%);
+  background: radial-gradient(farthest-side at 55% 50%, color-mix(in srgb, var(--accent) 22%, transparent) 0%, transparent 68%);
 }
 .cta h2 { margin-bottom: 0.9rem; }
 .cta__note {
