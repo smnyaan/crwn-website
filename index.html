@@ -64,7 +64,7 @@
         </p>
         <div class="hero__cta">
           <a href="#waitlist" class="btn btn--maroon">Explore CRWN</a>
-          <a href="#how" class="btn btn--outline">Create an account</a>
+          <a href="#audiences" class="btn btn--outline">Create an account</a>
         </div>
       </div>
 
@@ -94,37 +94,8 @@
       </div>
     </section>
 
-    <!-- ===== How it works ===== -->
-    <section class="section" id="how">
-      <div class="container">
-        <div class="section__head section__head--center reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>From first search to sitting in the chair.</h2>
-          <p>Three steps between not knowing where to start and loving your hair.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step reveal">
-            <span class="tag tag--profile">Profile</span>
-            <h3>Build your Hair Profile</h3>
-            <p>Curl pattern, porosity, density, and goals — captured once, used everywhere.</p>
-          </div>
-          <div class="step reveal">
-            <span class="tag tag--olive">Discover</span>
-            <h3>Discover &amp; compare</h3>
-            <p>Browse looks made for your texture and read Crown Ratings from real clients.</p>
-          </div>
-          <div class="step reveal">
-            <span class="tag tag--maroon">Book</span>
-            <h3>Book with confidence</h3>
-            <p>Pick a time, pay your deposit, and show up knowing they get your hair.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== Audience split ===== -->
-    <section class="section audiences">
+    <section class="section audiences" id="audiences">
       <div class="container">
         <div class="section__head section__head--center reveal">
           <h2>Built for everyone shaping textured hair.</h2>
@@ -133,27 +104,31 @@
 
         <div class="audiences__grid">
           <article class="card card--light reveal">
-            <div class="card__photos">
-              <span class="card__photo tile--braids"></span>
-              <span class="card__photo tile--silk"></span>
-              <span class="card__photo tile--locs"></span>
-            </div>
             <p class="card__label">For your hair</p>
             <h3>Clients</h3>
+            <span class="card__icon card__icon--ochre" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>
+            </span>
             <p>Discover styles and book providers you trust.</p>
-            <a href="#waitlist" class="pill-cta pill-cta--rust">Explore for clients &rarr;</a>
+            <div class="card__tags">
+              <span class="tag tag--profile">Discovery</span>
+              <span class="tag tag--maroon-deep">Community</span>
+              <span class="tag tag--tan">Your hair</span>
+            </div>
           </article>
 
           <article class="card card--dark reveal">
-            <div class="card__photos">
-              <span class="card__photo tile--braids"></span>
-              <span class="card__photo tile--wash"></span>
-              <span class="card__photo tile--locs"></span>
-            </div>
             <p class="card__label card__label--accent">For your craft</p>
             <h3>Providers</h3>
+            <span class="card__icon card__icon--champagne" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><line x1="8.2" y1="7.5" x2="19" y2="18"/><line x1="8.2" y1="16.5" x2="19" y2="6"/></svg>
+            </span>
             <p>Showcase your work, manage bookings, and get paid.</p>
-            <a href="#waitlist" class="pill-cta pill-cta--cream">Explore for providers &rarr;</a>
+            <div class="card__tags">
+              <span class="tag tag--champagne">Portfolio</span>
+              <span class="tag tag--maroon-deep">Bookings</span>
+              <span class="tag tag--tan">Payments</span>
+            </div>
           </article>
         </div>
       </div>
@@ -302,7 +277,6 @@
 
       <nav class="footer__col" aria-label="Explore">
         <p class="footer__heading">Explore</p>
-        <a href="#how">How it works</a>
         <a href="#discover">Discover</a>
         <a href="#hair">Your hair</a>
         <a href="#providers">Providers</a>

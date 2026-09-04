@@ -357,24 +357,9 @@ a { color: inherit; text-decoration: none; }
 }
 .js-reveal .reveal.is-visible { opacity: 1; transform: none; }
 
-/* ===== How it works ===== */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.step {
-  padding: 2rem 1.75rem;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: color-mix(in srgb, var(--bg) 60%, #fff 40%);
-}
-.step h3 { font-size: 1.2rem; margin: 1.4rem 0 0.55rem; }
-.step p { font-size: 0.92rem; }
-
 /* ===== Tag pills =====
-   Reusable colored chips echoing the app's tag/topic palette — used as the
-   "how it works" markers, and as the category tags on the audience cards. */
+   Reusable colored chips echoing the app's tag/topic palette — used as
+   the category tags on the audience cards and the feature-section pills. */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -385,11 +370,14 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.tag--cream   { background: var(--bg); color: var(--ink); border: 1px solid var(--line); }
-.tag--rust    { background: var(--accent); color: #fff; }
-.tag--olive   { background: var(--olive); color: #fff; }
-.tag--maroon  { background: var(--maroon); color: #fff; }
-.tag--profile { background: #b35d2b; color: #fff; }
+.tag--cream       { background: var(--bg); color: var(--ink); border: 1px solid var(--line); }
+.tag--rust        { background: var(--accent); color: #fff; }
+.tag--olive       { background: var(--olive); color: #fff; }
+.tag--maroon      { background: var(--maroon); color: #fff; }
+.tag--profile     { background: #b35d2b; color: #fff; }
+.tag--maroon-deep { background: #5d1f1f; color: #fff; }
+.tag--tan         { background: #8a6a3a; color: #fff; }
+.tag--champagne   { background: #e8ddd0; color: var(--ink); }
 
 /* ===== Audiences ===== */
 .audiences__grid {
@@ -399,11 +387,12 @@ a { color: inherit; text-decoration: none; }
 }
 .card {
   border-radius: 20px;
-  padding: 2.4rem;
+  padding: 2.8rem 2.4rem;
+  text-align: center;
   transition: transform 0.3s var(--ease);
 }
 .card:hover { transform: translateY(-4px); }
-.card h3 { margin: 0.5rem 0 0.6rem; }
+.card h3 { margin: 0.5rem 0 1.4rem; }
 .card__label {
   font-size: 0.72rem;
   font-weight: 600;
@@ -411,22 +400,31 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--olive);
 }
-.card--light { background: var(--bg-alt); }
-.card--dark  { background: var(--dark); }
+.card--light { background: #e8ddd0; }
+.card--dark  { background: var(--brown-dark); }
 .card--dark h3 { color: #fff; }
-.card--dark p  { color: #b8b2a6; }
+.card--dark p  { color: #cdbfae; }
 .card__label--accent { color: var(--accent); }
-.card__photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 1.6rem;
+.card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 1.4rem;
 }
-.card__photo {
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  display: block;
+.card__icon svg { width: 26px; height: 26px; }
+.card__icon--ochre     { background: #b35d2b; color: #fff; }
+.card__icon--champagne { background: #e8ddd0; color: var(--brown-dark); }
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.4rem;
 }
+
 /* ===== Feature rows ===== */
 .feature--alt {
   background: radial-gradient(farthest-side at 50% 50%, color-mix(in srgb, var(--accent-2) 13%, transparent) 0%, transparent 74%);
