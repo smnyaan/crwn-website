@@ -39,25 +39,51 @@
 html { scroll-behavior: smooth; }
 
 body {
-  /* A handful of soft, low-opacity color blooms scattered down the full
-     page height (not just the hero) — maroon, gold, ochre-brown, olive —
-     plus grain over the top, so warmth and texture both read throughout
-     the page rather than only in a couple of spots. */
+  /* Grain stays put on the body itself; the color blooms live in the
+     .bg-glow layer below so they can slowly "breathe" without the grain
+     appearing to move with them. */
+  position: relative;
   background-color: var(--bg);
-  background-image:
-    var(--grain),
-    radial-gradient(1100px 520px at 50% -6%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 60%),
-    radial-gradient(900px 900px at 10% 20%, color-mix(in srgb, var(--maroon) 10%, transparent), transparent 65%),
-    radial-gradient(1000px 750px at 92% 42%, color-mix(in srgb, var(--color) 14%, transparent), transparent 65%),
-    radial-gradient(1100px 850px at 15% 68%, color-mix(in srgb, var(--olive) 11%, transparent), transparent 65%),
-    radial-gradient(950px 650px at 85% 88%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 65%);
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-blend-mode: overlay, normal, normal, normal, normal, normal;
+  background-image: var(--grain);
+  background-repeat: repeat;
+  background-blend-mode: overlay;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* A handful of soft, low-opacity color blooms scattered down the full
+   page height (not just the hero) — maroon, gold, ochre-brown, olive —
+   that drift and pulse gently, like the page is breathing. This is a
+   real element (not body::before) with its own overflow:hidden, so the
+   animated bleed clips against itself rather than needing overflow
+   hidden on body/html — which would break the sticky header. */
+.bg-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.bg-glow::before {
+  content: "";
+  position: absolute;
+  inset: -6%;
+  background-image:
+    radial-gradient(1100px 520px at 50% -6%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 60%),
+    radial-gradient(900px 900px at 10% 20%, color-mix(in srgb, var(--maroon) 10%, transparent), transparent 65%),
+    radial-gradient(1000px 750px at 92% 42%, color-mix(in srgb, var(--color) 14%, transparent), transparent 65%),
+    radial-gradient(1100px 850px at 15% 68%, color-mix(in srgb, var(--olive) 11%, transparent), transparent 65%),
+    radial-gradient(950px 650px at 85% 88%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 65%);
+  background-repeat: no-repeat;
+  animation: breathe 18s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 1; }
+  50% { transform: scale(1.06) translate(-1%, 1%); opacity: 0.85; }
 }
 
 .container {
@@ -138,19 +164,34 @@ a { color: inherit; text-decoration: none; }
 .link-plain { font-size: 0.92rem; color: var(--ink-soft); }
 .link-plain:hover { color: var(--ink); }
 
-.link-arrow {
+/* Pill CTA — the same rounded, uppercase, colored-chip language as the
+   .tag pills, but sized and interactive as a link. Used everywhere a
+   section takes someone somewhere, instead of a bare underlined link. */
+.pill-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   margin-top: 1.4rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--ink);
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 2px;
-  transition: gap 0.2s var(--ease), color 0.2s var(--ease);
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
-.link-arrow:hover { gap: 0.65rem; color: var(--accent); border-color: var(--accent); }
+.pill-cta:hover { transform: translateY(-2px); }
+.pill-cta--rust   { background: var(--accent); color: #fff; }
+.pill-cta--olive  { background: var(--olive); color: #fff; }
+.pill-cta--maroon { background: var(--maroon); color: #fff; }
+.pill-cta--cream  { background: var(--bg); color: var(--ink); }
+
+.feature__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.4rem 0 0.4rem;
+}
 
 /* ===== Header =====
    Same light ground as the rest of the page, just with the bolder wordmark
@@ -374,8 +415,6 @@ a { color: inherit; text-decoration: none; }
 .card--dark  { background: var(--dark); }
 .card--dark h3 { color: #fff; }
 .card--dark p  { color: #b8b2a6; }
-.card--dark .link-arrow { color: #fff; border-color: #fff; }
-.card--dark .link-arrow:hover { color: var(--accent-2); border-color: var(--accent-2); }
 .card__label--accent { color: var(--accent); }
 .card__photos {
   display: grid;
@@ -388,13 +427,6 @@ a { color: inherit; text-decoration: none; }
   border-radius: 10px;
   display: block;
 }
-.card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 1.3rem;
-}
-
 /* ===== Feature rows ===== */
 .feature--alt {
   background: radial-gradient(farthest-side at 50% 50%, color-mix(in srgb, var(--accent-2) 13%, transparent) 0%, transparent 74%);
@@ -591,5 +623,6 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .btn, .style-card, .card, .phone, .link-arrow { transition: none; }
+  .btn, .style-card, .card, .phone, .pill-cta { transition: none; }
+  .bg-glow::before { animation: none; }
 }
