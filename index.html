@@ -23,10 +23,10 @@
       <a href="#" class="logo">crwn<span>.</span></a>
 
       <nav class="nav" aria-label="Primary">
+        <a href="#how">How it works</a>
         <a href="#discover">Discover</a>
         <a href="#hair">Your hair</a>
         <a href="#professionals">Professionals</a>
-        <a href="#why">Why CRWN</a>
       </nav>
 
       <div class="header__actions">
@@ -45,18 +45,20 @@
     <section class="hero">
       <div class="container hero__inner">
         <p class="eyebrow">CRWN</p>
-        <h1>The home for every<br />textured hair journey.</h1>
+        <h1>Every texture,<br /><em>fully understood</em>.</h1>
         <p class="hero__sub">
-          Inspiration, education, and trusted professionals, all in one place.
+          The digital home for textured hair — inspiration, education, and
+          trusted professionals, all in one place.
         </p>
         <div class="hero__cta">
           <a href="#waitlist" class="btn btn--dark">Join the waitlist</a>
           <a href="#how" class="btn btn--outline">See how it works</a>
         </div>
+        <p class="hero__meta"><span class="dot"></span>Free for clients, always.</p>
       </div>
 
       <div class="container">
-        <ul class="palette" aria-label="Textured hair styles">
+        <ul class="palette reveal" aria-label="Textured hair styles">
           <li class="swatch swatch--braids"><span>Knotless Braids</span></li>
           <li class="swatch swatch--locs"><span>Locs</span></li>
           <li class="swatch swatch--silk"><span>Silk Press</span></li>
@@ -66,23 +68,52 @@
       </div>
     </section>
 
+    <!-- ===== How it works ===== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>From first search to sitting in the chair.</h2>
+          <p>Three steps between not knowing where to start and loving your hair.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Build your Hair Profile</h3>
+            <p>Curl pattern, porosity, density, and goals — captured once, used everywhere.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">2</span>
+            <h3>Discover &amp; compare</h3>
+            <p>Browse looks made for your texture and read Crown Ratings from real clients.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">3</span>
+            <h3>Book with confidence</h3>
+            <p>Pick a time, pay your deposit, and show up knowing they get your hair.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Audience split ===== -->
     <section class="section audiences" id="why">
       <div class="container">
-        <div class="section__head section__head--center">
+        <div class="section__head section__head--center reveal">
           <h2>Built for everyone shaping textured hair.</h2>
           <p>Tools, inspiration, and community for your journey, however you show up.</p>
         </div>
 
         <div class="audiences__grid">
-          <article class="card card--light">
+          <article class="card card--light reveal">
             <p class="card__label">For your hair</p>
             <h3>Clients</h3>
             <p>Discover styles and book professionals you trust.</p>
             <a href="#" class="link-arrow">Explore the app for clients &rarr;</a>
           </article>
 
-          <article class="card card--dark" id="professionals">
+          <article class="card card--dark reveal" id="professionals">
             <p class="card__label card__label--accent">For your craft</p>
             <h3>Professionals</h3>
             <p>Showcase your work, manage bookings, and get paid.</p>
@@ -95,7 +126,7 @@
     <!-- ===== Feature: Discover ===== -->
     <section class="section feature" id="discover">
       <div class="container feature__inner">
-        <div class="feature__text">
+        <div class="feature__text reveal">
           <p class="eyebrow">Discover</p>
           <h2>Inspiration that looks like you.</h2>
           <p>
@@ -104,7 +135,7 @@
           </p>
           <a href="#" class="link-arrow">Explore the feed &rarr;</a>
         </div>
-        <div class="feature__media">
+        <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
               <span class="phone__tag">Explore</span>
@@ -123,7 +154,7 @@
     <!-- ===== Feature: Know your hair ===== -->
     <section class="section feature feature--alt" id="hair">
       <div class="container feature__inner feature__inner--reverse">
-        <div class="feature__media">
+        <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
               <span class="phone__tag">Profile</span>
@@ -137,7 +168,7 @@
             </div>
           </div>
         </div>
-        <div class="feature__text">
+        <div class="feature__text reveal">
           <p class="eyebrow">Know your hair</p>
           <h2>Understanding your hair changes everything.</h2>
           <p>
@@ -152,7 +183,7 @@
     <!-- ===== Feature: Find professionals ===== -->
     <section class="section feature">
       <div class="container feature__inner">
-        <div class="feature__text">
+        <div class="feature__text reveal">
           <p class="eyebrow">Find professionals</p>
           <h2>Find someone who gets your hair.</h2>
           <p>
@@ -161,7 +192,7 @@
           </p>
           <a href="#" class="link-arrow">Browse professionals &rarr;</a>
         </div>
-        <div class="feature__media">
+        <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
               <span class="phone__tag">Upcoming</span>
@@ -179,7 +210,7 @@
     <!-- ===== Feature: For your craft ===== -->
     <section class="section feature feature--alt">
       <div class="container feature__inner feature__inner--reverse">
-        <div class="feature__media">
+        <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
               <span class="phone__tag">Import services</span>
@@ -192,7 +223,7 @@
             </div>
           </div>
         </div>
-        <div class="feature__text">
+        <div class="feature__text reveal">
           <p class="eyebrow">For your craft</p>
           <h2>Set up your profile in minutes.</h2>
           <p>
@@ -206,7 +237,7 @@
 
     <!-- ===== Community ===== -->
     <section class="section community">
-      <div class="container">
+      <div class="container reveal">
         <p class="eyebrow">Community</p>
         <h2>It&rsquo;s more than appointments.</h2>
         <p class="community__quote">
@@ -215,9 +246,57 @@
       </div>
     </section>
 
+    <!-- ===== FAQ ===== -->
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions, answered.</h2>
+        </div>
+
+        <div class="faq reveal">
+          <details class="faq__item" open>
+            <summary class="faq__q">
+              Is CRWN free to use as a client?
+              <span class="faq__icon"></span>
+            </summary>
+            <p class="faq__a">Yes. Discovering styles, building your Hair Profile, and booking professionals is always free for clients.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">
+              How do I know a professional understands textured hair?
+              <span class="faq__icon"></span>
+            </summary>
+            <p class="faq__a">Every professional profile shows their specialties, portfolio, and Crown Ratings from real clients, so you can book with confidence.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">
+              Can professionals import their existing bookings?
+              <span class="faq__icon"></span>
+            </summary>
+            <p class="faq__a">Yes. Connect StyleSeat, Vagaro, or Instagram in minutes, or add services manually — no need to start from scratch.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">
+              Is my Hair Profile private?
+              <span class="faq__icon"></span>
+            </summary>
+            <p class="faq__a">Your Hair Profile is yours. It's only shared with professionals when you choose to book with them.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">
+              When does CRWN launch?
+              <span class="faq__icon"></span>
+            </summary>
+            <p class="faq__a">We're onboarding early. Join the waitlist to get access as we roll out city by city.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Final CTA ===== -->
     <section class="section cta" id="waitlist">
-      <div class="container">
+      <div class="container reveal">
         <p class="eyebrow">CRWN</p>
         <h2>Your next chapter starts here.</h2>
         <p>Join thousands discovering inspiration and professionals they trust.</p>
@@ -243,6 +322,7 @@
 
       <nav class="footer__col" aria-label="Explore">
         <p class="footer__heading">Explore</p>
+        <a href="#how">How it works</a>
         <a href="#discover">Discover</a>
         <a href="#hair">Your hair</a>
         <a href="#professionals">Professionals</a>
