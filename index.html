@@ -17,6 +17,17 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Rough-edge filter for the hero headline: warps the glyph outlines
+       themselves (not a texture drawn over them) for a hand-stamped look. -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough-edge" x="-8%" y="-25%" width="116%" height="150%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045 0.09" numOctaves="2" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
   <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="container header__inner">
