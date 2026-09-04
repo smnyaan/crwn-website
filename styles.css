@@ -31,7 +31,7 @@
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch' result='t'/%3E%3CfeColorMatrix in='t' type='matrix' values='0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch' result='t'/%3E%3CfeColorMatrix in='t' type='matrix' values='0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,12 +39,20 @@
 html { scroll-behavior: smooth; }
 
 body {
+  /* A handful of soft, low-opacity color blooms scattered down the full
+     page height (not just the hero) — maroon, gold, ochre-brown, olive —
+     plus grain over the top, so warmth and texture both read throughout
+     the page rather than only in a couple of spots. */
   background-color: var(--bg);
   background-image:
     var(--grain),
-    radial-gradient(1100px 520px at 50% -8%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 60%);
-  background-repeat: repeat, no-repeat;
-  background-blend-mode: overlay, normal;
+    radial-gradient(1100px 520px at 50% -6%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 60%),
+    radial-gradient(900px 900px at 10% 20%, color-mix(in srgb, var(--maroon) 10%, transparent), transparent 65%),
+    radial-gradient(1000px 750px at 92% 42%, color-mix(in srgb, var(--color) 14%, transparent), transparent 65%),
+    radial-gradient(1100px 850px at 15% 68%, color-mix(in srgb, var(--olive) 11%, transparent), transparent 65%),
+    radial-gradient(950px 650px at 85% 88%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 65%);
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-blend-mode: overlay, normal, normal, normal, normal, normal;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
@@ -96,6 +104,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
   margin-bottom: 1rem;
 }
+.eyebrow--wordmark {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
 .eyebrow::before {
   content: "";
   display: inline-block;
@@ -119,12 +134,12 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease), opacity 0.2s var(--ease);
 }
 .btn:hover { transform: translateY(-2px); }
-.btn--dark {
-  background: var(--dark);
+.btn--maroon {
+  background: var(--maroon);
   color: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
-.btn--dark:hover { box-shadow: 0 14px 30px -12px rgba(22, 18, 14, 0.45); }
+.btn--maroon:hover { box-shadow: 0 14px 30px -12px rgba(111, 35, 27, 0.5); }
 .btn--outline { border: 1px solid var(--ink); color: var(--ink); }
 .btn--outline:hover { background: var(--ink); color: #fff; }
 
@@ -168,7 +183,6 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--brown-dark);
-  filter: url(#rough-edge-sm);
 }
 .logo span { color: var(--brown-dark); }
 
@@ -244,7 +258,7 @@ a { color: inherit; text-decoration: none; }
   background: radial-gradient(farthest-side at 50% 15%, color-mix(in srgb, var(--accent-2) 24%, transparent) 0%, transparent 68%);
 }
 .hero__inner { text-align: center; max-width: 760px; margin: 0 auto 3.75rem; }
-.hero__sub { font-size: 1.1rem; margin: 1.5rem auto 2.1rem; max-width: 460px; }
+.hero__sub { font-size: 1.1rem; margin: 1.5rem auto 2.1rem; max-width: 460px; color: var(--brick); }
 .hero__cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .cta .hero__cta { margin-top: 2rem; }
@@ -317,21 +331,26 @@ a { color: inherit; text-decoration: none; }
   border-radius: 18px;
   background: color-mix(in srgb, var(--bg) 60%, #fff 40%);
 }
-.step__num {
+.step h3 { font-size: 1.2rem; margin: 1.4rem 0 0.55rem; }
+.step p { font-size: 0.92rem; }
+
+/* ===== Tag pills =====
+   Reusable colored chips echoing the app's tag/topic palette — used as the
+   "how it works" markers, and as the category tags on the audience cards. */
+.tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--dark);
-  color: #fff;
-  font-family: var(--serif);
-  font-size: 0.95rem;
-  margin-bottom: 1.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
-.step h3 { font-size: 1.2rem; margin-bottom: 0.55rem; }
-.step p { font-size: 0.92rem; }
+.tag--cream  { background: var(--bg); color: var(--ink); border: 1px solid var(--line); }
+.tag--rust   { background: var(--accent); color: #fff; }
+.tag--olive  { background: var(--olive); color: #fff; }
+.tag--maroon { background: var(--maroon); color: #fff; }
 
 /* ===== Audiences ===== */
 .audiences__grid {
@@ -360,6 +379,23 @@ a { color: inherit; text-decoration: none; }
 .card--dark .link-arrow { color: #fff; border-color: #fff; }
 .card--dark .link-arrow:hover { color: var(--accent-2); border-color: var(--accent-2); }
 .card__label--accent { color: var(--accent); }
+.card__photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 1.6rem;
+}
+.card__photo {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  display: block;
+}
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.3rem;
+}
 
 /* ===== Feature rows ===== */
 .feature--alt {

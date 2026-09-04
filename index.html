@@ -17,20 +17,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Rough-edge filters: warp the glyph outlines themselves (not a texture
-       drawn over them) for a hand-stamped look. Same turbulence character
-       (frequency, octaves, seed) in both; only the displacement scale
-       differs, since a fixed pixel displacement that reads as a rough edge
-       on the large headline would shred the much smaller logo text. -->
+  <!-- Rough-edge filter for the hero headline: warps the glyph outlines
+       themselves (not a texture drawn over them) for a hand-stamped look. -->
   <svg width="0" height="0" style="position: absolute" aria-hidden="true">
     <defs>
       <filter id="rough-edge" x="-20%" y="-40%" width="140%" height="180%">
         <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
         <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-      <filter id="rough-edge-sm" x="-20%" y="-40%" width="140%" height="180%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.8" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
   </svg>
@@ -49,7 +42,7 @@
 
       <div class="header__actions">
         <a href="#" class="link-plain">Log in</a>
-        <a href="#waitlist" class="btn btn--dark">Explore CRWN</a>
+        <a href="#waitlist" class="btn btn--maroon">Explore CRWN</a>
       </div>
 
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -62,13 +55,13 @@
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="container hero__inner">
-        <p class="eyebrow">CRWN</p>
+        <p class="eyebrow eyebrow--wordmark">crwn.</p>
         <h1>The home for every<br />textured hair journey.</h1>
         <p class="hero__sub">
           Inspiration, education, and trusted professionals, all in one place.
         </p>
         <div class="hero__cta">
-          <a href="#waitlist" class="btn btn--dark">Explore CRWN</a>
+          <a href="#waitlist" class="btn btn--maroon">Explore CRWN</a>
           <a href="#how" class="btn btn--outline">Create an account</a>
         </div>
       </div>
@@ -95,17 +88,17 @@
 
         <div class="steps">
           <div class="step reveal">
-            <span class="step__num">1</span>
+            <span class="tag tag--rust">Profile</span>
             <h3>Build your Hair Profile</h3>
             <p>Curl pattern, porosity, density, and goals — captured once, used everywhere.</p>
           </div>
           <div class="step reveal">
-            <span class="step__num">2</span>
+            <span class="tag tag--olive">Discover</span>
             <h3>Discover &amp; compare</h3>
             <p>Browse looks made for your texture and read Crown Ratings from real clients.</p>
           </div>
           <div class="step reveal">
-            <span class="step__num">3</span>
+            <span class="tag tag--maroon">Book</span>
             <h3>Book with confidence</h3>
             <p>Pick a time, pay your deposit, and show up knowing they get your hair.</p>
           </div>
@@ -123,16 +116,34 @@
 
         <div class="audiences__grid">
           <article class="card card--light reveal">
+            <div class="card__photos">
+              <span class="card__photo tile--braids"></span>
+              <span class="card__photo tile--silk"></span>
+              <span class="card__photo tile--locs"></span>
+            </div>
             <p class="card__label">For your hair</p>
             <h3>Clients</h3>
             <p>Discover styles and book professionals you trust.</p>
+            <div class="card__tags">
+              <span class="tag tag--cream">Discover</span>
+              <span class="tag tag--rust">Book</span>
+            </div>
             <a href="#" class="link-arrow">Explore the app for clients &rarr;</a>
           </article>
 
           <article class="card card--dark reveal" id="professionals">
+            <div class="card__photos">
+              <span class="card__photo tile--braids"></span>
+              <span class="card__photo tile--wash"></span>
+              <span class="card__photo tile--locs"></span>
+            </div>
             <p class="card__label card__label--accent">For your craft</p>
             <h3>Professionals</h3>
             <p>Showcase your work, manage bookings, and get paid.</p>
+            <div class="card__tags">
+              <span class="tag tag--olive">Portfolio</span>
+              <span class="tag tag--maroon">Bookings</span>
+            </div>
             <a href="#" class="link-arrow">Explore the app for professionals &rarr;</a>
           </article>
         </div>
@@ -317,7 +328,7 @@
         <h2>Your next chapter starts here.</h2>
         <p>Join thousands discovering inspiration and professionals they trust.</p>
         <div class="hero__cta">
-          <a href="#" class="btn btn--dark">Explore CRWN</a>
+          <a href="#" class="btn btn--maroon">Explore CRWN</a>
           <a href="#" class="btn btn--outline">For professionals</a>
         </div>
         <p class="cta__note">Every crown tells a story.</p>
