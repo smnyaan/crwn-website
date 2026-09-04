@@ -266,9 +266,10 @@ a { color: inherit; text-decoration: none; }
   gap: 16px;
 }
 
-/* Same photo, used twice: a blurred copy sits behind and bleeds a soft
-   glow past the card's edges, and the sharp copy sits on top, clipped
-   tight to its own rounded corners with the amber drop shadow. */
+/* Same photo, used twice: a blurred, grainy copy sits behind and bleeds a
+   soft textured glow past the card's edges, and the sharp copy sits on
+   top, clipped tight to its own rounded corners with a colored drop
+   shadow — the color is set per card below. */
 .style-card {
   position: relative;
   width: 174px;
@@ -290,10 +291,23 @@ a { color: inherit; text-decoration: none; }
   filter: blur(18px) saturate(1.3);
   transform: scale(1.08);
 }
-.style-card .style-image {
+.style-card .grain {
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  box-shadow: 0 4px 50px 0 rgba(248, 180, 48, 0.53);
+  border-radius: 16px;
+  background-image: var(--grain);
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+  pointer-events: none;
 }
+.style-card .style-image { z-index: 2; }
+
+.style-card--honey  .style-image { box-shadow: 0 4px 50px 0 rgba(248, 180, 48, 0.53); }
+.style-card--green  .style-image { box-shadow: 0 4px 50px 0 rgba(63, 82, 63, 0.53); }
+.style-card--rust   .style-image { box-shadow: 0 4px 50px 0 rgba(127, 105, 77, 0.53); }
+.style-card--ochre  .style-image { box-shadow: 0 4px 50px 0 rgba(179, 93, 43, 0.53); }
+.style-card--maroon .style-image { box-shadow: 0 4px 50px 0 rgba(93, 31, 31, 0.53); }
 
 /* ===== Sections ===== */
 .section { padding: clamp(3.75rem, 8vw, 6.5rem) 0; }
