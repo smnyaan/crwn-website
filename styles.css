@@ -161,9 +161,6 @@ a { color: inherit; text-decoration: none; }
 .btn--outline { background: var(--bg); border: 1px solid #8e683b; color: #8e683b; }
 .btn--outline:hover { background: #8e683b; color: #e8ddd0; }
 
-.link-plain { font-size: 0.92rem; color: var(--ink-soft); }
-.link-plain:hover { color: var(--ink); }
-
 /* Pill CTA — the same rounded, uppercase, colored-chip language as the
    .tag pills, but sized and interactive as a link. Used everywhere a
    section takes someone somewhere, instead of a bare underlined link. */
@@ -414,45 +411,36 @@ a { color: inherit; text-decoration: none; }
 .tag--champagne   { background: #e8ddd0; color: var(--ink); }
 
 /* ===== Audiences =====
-   Cards are a soft, warm near-white — a blend of the page's own cream
-   rather than flat white — so they sit into the grainy background
-   instead of cutting a harsh rectangle against it. A wide, soft amber
-   glow (echoing the hero style-cards) sits behind each one, and a faint
-   grain layer on the card itself keeps the texture continuous. */
+   No visible card surface at all — just a soft warm blob of light (the
+   box-shadow) sitting directly on the grainy page background, with the
+   icon/label/title centered inside it. The whole thing is a link. */
 .audiences__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 .card {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  border-radius: 26px;
-  padding: 3rem 2.4rem;
+  display: flex;
+  width: 357px;
+  height: 342px;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  border-radius: 16px;
+  box-shadow: 0 4px 40px 0 rgba(119, 103, 75, 0.8);
   text-align: center;
-  background: color-mix(in srgb, var(--bg) 55%, #fff 45%);
-  border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
-  box-shadow: 0 30px 70px -32px rgba(179, 93, 43, 0.45), 0 6px 22px -10px rgba(93, 31, 31, 0.15);
+  color: inherit;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: var(--grain);
-  opacity: 0.3;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-.card > * { position: relative; z-index: 1; }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 40px 90px -32px rgba(179, 93, 43, 0.55), 0 8px 26px -10px rgba(93, 31, 31, 0.2);
+  box-shadow: 0 4px 50px 4px rgba(119, 103, 75, 0.9);
 }
 .card h3 {
-  margin: 0.35rem 0 1.7rem;
+  margin: 0;
   font-size: 1.9rem;
   color: var(--maroon);
 }
@@ -462,7 +450,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #5d1f1f;
-  margin-top: 0.9rem;
+  margin: 0;
 }
 .card__icon {
   display: inline-flex;
