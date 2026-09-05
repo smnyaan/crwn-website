@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Figtree:wght@500&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="styles.css" />
@@ -25,7 +25,7 @@
     <defs>
       <filter id="rough-edge" x="-20%" y="-40%" width="140%" height="180%">
         <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
   </svg>
@@ -110,8 +110,9 @@
         </div>
 
         <div class="audiences__grid">
+          <span class="audiences__glow" aria-hidden="true"></span>
           <a href="#clients" class="card reveal">
-            <span class="card__icon" aria-hidden="true">
+            <span class="card__icon card__icon--user" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>
             </span>
             <p class="card__label">For your hair</p>
@@ -119,7 +120,7 @@
           </a>
 
           <a href="#providers" class="card reveal">
-            <span class="card__icon" aria-hidden="true">
+            <span class="card__icon card__icon--scissors" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><line x1="8.2" y1="7.5" x2="19" y2="18"/><line x1="8.2" y1="16.5" x2="19" y2="6"/></svg>
             </span>
             <p class="card__label">For your craft</p>

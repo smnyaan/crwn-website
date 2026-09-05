@@ -437,16 +437,35 @@ a { color: inherit; text-decoration: none; }
 .tag--champagne   { background: #e8ddd0; color: var(--ink); }
 
 /* ===== Audiences =====
-   No visible card surface at all — just a soft warm blob of light (the
-   box-shadow) sitting directly on the grainy page background, with the
-   icon/label/title centered inside it. The whole thing is a link. */
+   No visible card surface at all — an organic, grainy honey-to-rust
+   blob (a separate SVG, feTurbulence-distorted) sits behind the pair,
+   the card itself carries only the drop-shadow, and the icon/label/
+   title sit centered on top. The whole card is the link. */
 .audiences__grid {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 40px;
 }
+.audiences__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1052px, 130%);
+  aspect-ratio: 1052 / 531;
+  background-image: url("images/audience-glow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+}
 .card {
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 357px;
   height: 342px;
@@ -456,7 +475,6 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   gap: 21px;
   border-radius: 16px;
-  background: radial-gradient(closest-side, rgba(119, 103, 75, 0.4), transparent 100%);
   box-shadow: 0 4px 40px 0 rgba(119, 103, 75, 0.8);
   text-align: center;
   color: inherit;
@@ -468,26 +486,32 @@ a { color: inherit; text-decoration: none; }
 }
 .card h3 {
   margin: 0;
-  font-size: 1.9rem;
-  color: var(--maroon);
+  font-family: var(--serif);
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: #6e3635;
 }
 .card__label {
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-family: "Figtree", var(--sans);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #5d1f1f;
+  color: #6e3635;
   margin: 0;
 }
 .card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
   color: #b35d2b;
 }
-.card__icon svg { width: 34px; height: 34px; }
+.card__icon--user { width: 60px; height: 60px; }
+.card__icon--user svg { width: 60px; height: 60px; }
+.card__icon--scissors { width: 72px; height: 72px; }
+.card__icon--scissors svg { width: 72px; height: 72px; }
 
 /* ===== Feature rows ===== */
 .feature--alt {
