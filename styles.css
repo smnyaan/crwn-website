@@ -454,7 +454,7 @@ a { color: inherit; text-decoration: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(860px, 130%);
+  width: min(640px, 130%);
   aspect-ratio: 1052 / 531;
   background-image: url("images/audience-glow.svg");
   background-repeat: no-repeat;
@@ -467,13 +467,13 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 1;
   display: flex;
-  width: 290px;
-  height: 278px;
-  padding: 24px;
+  width: 216px;
+  height: 208px;
+  padding: 18px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 17px;
+  gap: 13px;
   text-align: center;
   color: inherit;
   transition: transform 0.3s var(--ease);
@@ -482,7 +482,7 @@ a { color: inherit; text-decoration: none; }
 .card h3 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: lowercase;
@@ -490,7 +490,7 @@ a { color: inherit; text-decoration: none; }
 }
 .card__label {
   font-family: "Figtree", var(--sans);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -503,10 +503,10 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   color: #b35d2b;
 }
-.card__icon--user { width: 48px; height: 48px; }
-.card__icon--user svg { width: 48px; height: 48px; }
-.card__icon--scissors { width: 58px; height: 58px; }
-.card__icon--scissors svg { width: 58px; height: 58px; }
+.card__icon--user { width: 36px; height: 36px; }
+.card__icon--user svg { width: 36px; height: 36px; }
+.card__icon--scissors { width: 44px; height: 44px; }
+.card__icon--scissors svg { width: 44px; height: 44px; }
 
 /* ===== Feature rows ===== */
 .feature--alt {
