@@ -365,6 +365,30 @@ a { color: inherit; text-decoration: none; }
 }
 .style-card .style-image { z-index: 1; }
 
+/* A soft dark scrim fading up from the bottom edge so the label pill
+   stays readable over any photo, plus the pill itself. */
+.style-card__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent 45%);
+  pointer-events: none;
+}
+.style-card__label {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(28, 23, 18, 0.55);
+  backdrop-filter: blur(3px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
 .style-card--honey  .style-image { box-shadow: 0 4px 50px 0 rgba(248, 180, 48, 0.53); }
 .style-card--green  .style-image { box-shadow: 0 4px 50px 0 rgba(63, 82, 63, 0.53); }
 .style-card--rust   .style-image { box-shadow: 0 4px 50px 0 rgba(127, 105, 77, 0.53); }
