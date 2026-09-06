@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRWN — Stories</title>
+  <meta
+    name="description"
+    content="Real journeys from clients and providers building their crown, one chapter at a time."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Figtree:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Rough-edge filter for headlines: warps the glyph outlines themselves
+       (not a texture drawn over them) for a hand-stamped look. -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough-edge" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">crwn<span>.</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#clients">Clients</a>
+        <a href="index.html#providers">Providers</a>
+        <a href="index.html#why">Why CRWN</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="index.html#waitlist" class="btn btn--maroon">Explore CRWN</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Stories ===== -->
+    <section class="section stories">
+      <div class="container reveal" style="text-align: center; padding: 6rem 0;">
+        <p class="eyebrow">Stories</p>
+        <h2>Short films, coming soon.</h2>
+        <p>
+          Real journeys from clients and providers building their crown,
+          one chapter at a time.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer">crwn<span>.</span></a>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/crwn.hq" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@crwn.hq" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c0 2.5 2 4.5 4.5 4.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/crwnhq" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="7.5" cy="6.8" r="0.6" fill="currentColor" stroke="none"/><line x1="7.5" y1="10" x2="7.5" y2="17"/><line x1="12" y1="10" x2="12" y2="17"/><path d="M12 13.2c0-1.5 1.1-2.6 2.5-2.6s2.5 1.1 2.5 2.6V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Get the app">
+        <p class="footer__heading">Get the app</p>
+        <a href="#">iOS</a>
+        <a href="#">Android</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Contact">
+        <p class="footer__heading">Contact</p>
+        <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>
+      </nav>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>Copyright 2026 CRWN Inc.</p>
+      <p><a href="legal/crwn-privacy-policy.pdf">Privacy</a> &middot; <a href="legal/crwn-terms-and-conditions.pdf">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
