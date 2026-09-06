@@ -40,6 +40,34 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
   });
 });
 
+// Mobile app banner: on iOS/Android, point visitors at the app store
+// instead of the web app, since a native app link makes more sense there.
+// Store URLs are placeholders until the apps are actually published.
+(function () {
+  const banner = document.getElementById('appBanner');
+  if (!banner) return;
+
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPhone|iPad|iPod/i.test(ua);
+  const isAndroid = /Android/i.test(ua);
+  if (!isIOS && !isAndroid) return;
+  if (localStorage.getItem('crwn-app-banner-dismissed')) return;
+
+  const link = document.getElementById('appBannerLink');
+  link.href = '#'; // TODO: replace with the real App Store / Play Store URL
+  banner.hidden = false;
+
+  document.getElementById('appBannerClose').addEventListener('click', () => {
+    banner.hidden = true;
+    try {
+      localStorage.setItem('crwn-app-banner-dismissed', '1');
+    } catch (e) {
+      // localStorage unavailable (private browsing, etc.) — banner just
+      // reappears next visit, which is an acceptable fallback.
+    }
+  });
+})();
+
 // Reveal sections as they enter the viewport
 const revealTargets = document.querySelectorAll('.reveal');
 
