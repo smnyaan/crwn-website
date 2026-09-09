@@ -159,69 +159,93 @@
           </div>
         </div>
         <div class="feature__media reveal">
-          <div class="phone">
+          <!-- Explore: two raw app screenshots stacked/overlapping, no
+               phone bezel — just the images as-is. -->
+          <div class="tab-panel is-active phone-stack" data-panel="explore">
+            <div class="phone-shot phone-shot--back">
+              <div class="phone-app__status">
+                <span>2:42</span>
+                <span class="phone-app__status-icons">
+                  <svg viewBox="0 0 16 12" fill="currentColor"><rect x="0" y="7" width="2.5" height="5" rx="0.5"/><rect x="4.5" y="5" width="2.5" height="7" rx="0.5"/><rect x="9" y="2.5" width="2.5" height="9.5" rx="0.5"/><rect x="13.5" y="0" width="2.5" height="12" rx="0.5"/></svg>
+                  <svg viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M1 4.5c4-4 10-4 14 0M3.3 7c2.6-2.4 6.8-2.4 9.4 0M5.7 9.3a4 4 0 0 1 4.6 0"/><circle cx="8" cy="11" r="0.8" fill="currentColor" stroke="none"/></svg>
+                  <svg viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5"/><rect x="2" y="2" width="14" height="8" rx="1" fill="currentColor" stroke="none"/><path d="M21.5 4v4" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <div class="phone-app__filters">
+                <span class="phone-app__filter">All</span>
+                <span class="phone-app__filter is-active">braidout</span>
+                <span class="phone-app__filter">locs</span>
+                <span class="phone-app__filter">blonde</span>
+                <span class="phone-app__filter">braids</span>
+              </div>
+              <div class="phone-app__masonry">
+                <img class="phone-app__photo" src="images/style-3.png" alt="" />
+                <img class="phone-app__photo tall" src="images/style-4.png" alt="" />
+                <img class="phone-app__photo tall" src="images/style-5.png" alt="" />
+                <img class="phone-app__photo" src="images/style-1.png" alt="" />
+              </div>
+              <button type="button" class="phone-app__fab" aria-hidden="true">+</button>
+            </div>
+            <div class="phone-shot phone-shot--front">
+              <div class="phone-app__status">
+                <span>2:39</span>
+                <span class="phone-app__status-icons">
+                  <svg viewBox="0 0 16 12" fill="currentColor"><rect x="0" y="7" width="2.5" height="5" rx="0.5"/><rect x="4.5" y="5" width="2.5" height="7" rx="0.5"/><rect x="9" y="2.5" width="2.5" height="9.5" rx="0.5"/><rect x="13.5" y="0" width="2.5" height="12" rx="0.5"/></svg>
+                  <svg viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M1 4.5c4-4 10-4 14 0M3.3 7c2.6-2.4 6.8-2.4 9.4 0M5.7 9.3a4 4 0 0 1 4.6 0"/><circle cx="8" cy="11" r="0.8" fill="currentColor" stroke="none"/></svg>
+                  <svg viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5"/><rect x="2" y="2" width="14" height="8" rx="1" fill="currentColor" stroke="none"/><path d="M21.5 4v4" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <div class="phone-app__filters">
+                <span class="phone-app__filter is-active">All</span>
+                <span class="phone-app__filter">curlfest</span>
+                <span class="phone-app__filter">locs</span>
+                <span class="phone-app__filter">natural</span>
+                <span class="phone-app__filter">braidout</span>
+              </div>
+              <div class="phone-app__masonry">
+                <img class="phone-app__photo" src="images/style-1.png" alt="" />
+                <img class="phone-app__photo tall" src="images/style-2.png" alt="" />
+                <img class="phone-app__photo tall" src="images/style-3.png" alt="" />
+                <img class="phone-app__photo" src="images/style-4.png" alt="" />
+                <span class="phone-app__tag-card">#braidout</span>
+                <img class="phone-app__photo" src="images/style-5.png" alt="" />
+              </div>
+              <button type="button" class="phone-app__fab" aria-hidden="true">+</button>
+            </div>
+          </div>
+
+          <div class="tab-panel phone" data-panel="community">
             <div class="phone__screen">
-              <div class="tab-panel is-active" data-panel="explore">
-                <div class="phone-app">
-                  <div class="phone-app__status">
-                    <span>2:39</span>
-                    <span class="phone-app__status-icons">
-                      <svg viewBox="0 0 16 12" fill="currentColor"><rect x="0" y="7" width="2.5" height="5" rx="0.5"/><rect x="4.5" y="5" width="2.5" height="7" rx="0.5"/><rect x="9" y="2.5" width="2.5" height="9.5" rx="0.5"/><rect x="13.5" y="0" width="2.5" height="12" rx="0.5"/></svg>
-                      <svg viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M1 4.5c4-4 10-4 14 0M3.3 7c2.6-2.4 6.8-2.4 9.4 0M5.7 9.3a4 4 0 0 1 4.6 0"/><circle cx="8" cy="11" r="0.8" fill="currentColor" stroke="none"/></svg>
-                      <svg viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5"/><rect x="2" y="2" width="14" height="8" rx="1" fill="currentColor" stroke="none"/><path d="M21.5 4v4" stroke-linecap="round"/></svg>
-                    </span>
-                  </div>
-                  <div class="phone-app__filters">
-                    <span class="phone-app__filter is-active">All</span>
-                    <span class="phone-app__filter">curlfest</span>
-                    <span class="phone-app__filter">locs</span>
-                    <span class="phone-app__filter">natural</span>
-                    <span class="phone-app__filter">braidout</span>
-                  </div>
-                  <div class="phone-app__masonry">
-                    <img class="phone-app__photo" src="images/style-1.png" alt="" />
-                    <img class="phone-app__photo tall" src="images/style-2.png" alt="" />
-                    <img class="phone-app__photo tall" src="images/style-3.png" alt="" />
-                    <img class="phone-app__photo" src="images/style-4.png" alt="" />
-                    <span class="phone-app__tag-card">#braidout</span>
-                    <img class="phone-app__photo" src="images/style-5.png" alt="" />
-                  </div>
-                  <button type="button" class="phone-app__fab" aria-hidden="true">+</button>
-                  <div class="phone-app__nav">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18"/></svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><line x1="8" y1="7.3" x2="19" y2="18"/><line x1="8" y1="16.7" x2="19" y2="6"/></svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a6 6 0 1 1 12 0c0 4 1.5 5.5 1.5 5.5H4.5S6 14 6 10z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20c0-3.4 2.9-5.8 6.5-5.8s6.5 2.4 6.5 5.8"/></svg>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-panel" data-panel="community">
-                <span class="phone__tag">Community</span>
-                <ul class="phone__list">
-                  <li><strong>Jade M.</strong> &middot; Silk press results<span>142 likes &middot; 18 comments</span></li>
-                  <li><strong>Priya S.</strong> &middot; My locs journey, month 6<span>96 likes &middot; 11 comments</span></li>
-                  <li><strong>Devon L.</strong> &middot; Wash day routine<span>73 likes &middot; 9 comments</span></li>
-                </ul>
-              </div>
-              <div class="tab-panel" data-panel="providers">
-                <span class="phone__tag">Nearby</span>
-                <ul class="phone__list">
-                  <li><strong>Amara J.</strong> &middot; Locs &amp; retwists<span>4.9 &middot; Brooklyn, NY</span></li>
-                  <li><strong>Maya K.</strong> &middot; Knotless braids<span>4.8 &middot; Queens, NY</span></li>
-                  <li><strong>Devon L.</strong> &middot; Silk press<span>4.9 &middot; Manhattan, NY</span></li>
-                </ul>
-              </div>
-              <div class="tab-panel" data-panel="your-hair">
-                <span class="phone__tag">Profile</span>
-                <dl class="phone__spec">
-                  <div><dt>Curl pattern</dt><dd>4B / 4C</dd></div>
-                  <div><dt>Porosity</dt><dd>High</dd></div>
-                  <div><dt>Density</dt><dd>Medium</dd></div>
-                  <div><dt>Scalp type</dt><dd>Dry</dd></div>
-                  <div><dt>Goal</dt><dd>Protective styling</dd></div>
-                </dl>
-              </div>
+              <span class="phone__tag">Community</span>
+              <ul class="phone__list">
+                <li><strong>Jade M.</strong> &middot; Silk press results<span>142 likes &middot; 18 comments</span></li>
+                <li><strong>Priya S.</strong> &middot; My locs journey, month 6<span>96 likes &middot; 11 comments</span></li>
+                <li><strong>Devon L.</strong> &middot; Wash day routine<span>73 likes &middot; 9 comments</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel phone" data-panel="providers">
+            <div class="phone__screen">
+              <span class="phone__tag">Nearby</span>
+              <ul class="phone__list">
+                <li><strong>Amara J.</strong> &middot; Locs &amp; retwists<span>4.9 &middot; Brooklyn, NY</span></li>
+                <li><strong>Maya K.</strong> &middot; Knotless braids<span>4.8 &middot; Queens, NY</span></li>
+                <li><strong>Devon L.</strong> &middot; Silk press<span>4.9 &middot; Manhattan, NY</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel phone" data-panel="your-hair">
+            <div class="phone__screen">
+              <span class="phone__tag">Profile</span>
+              <dl class="phone__spec">
+                <div><dt>Curl pattern</dt><dd>4B / 4C</dd></div>
+                <div><dt>Porosity</dt><dd>High</dd></div>
+                <div><dt>Density</dt><dd>Medium</dd></div>
+                <div><dt>Scalp type</dt><dd>Dry</dd></div>
+                <div><dt>Goal</dt><dd>Protective styling</dd></div>
+              </dl>
             </div>
           </div>
         </div>
