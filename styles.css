@@ -585,17 +585,17 @@ a { color: inherit; text-decoration: none; }
 .tile--locs   { background: linear-gradient(155deg, #e0954f, var(--locs)); }
 
 /* ===== Explore panel: two raw app screenshots, no phone bezel =====
-   Two overlapping screenshot cards (rounded corners + shadow only,
-   no dark device frame) standing in for real app screenshots. */
+   Two screenshot cards (rounded corners + shadow only, no dark device
+   frame) set apart diagonally, with floating callout pills around them,
+   standing in for real app screenshots. */
 .phone-stack {
   position: relative;
-  width: 300px;
-  height: 500px;
+  width: 448px;
+  height: 552px;
 }
 .phone-shot {
   position: absolute;
-  width: 228px;
-  min-height: 420px;
+  width: 212px;
   background: #fdfbf6;
   border-radius: 26px;
   overflow: hidden;
@@ -608,17 +608,55 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   left: 0;
   z-index: 1;
-  transform: rotate(-6deg);
+  transform: rotate(-5deg);
 }
 .phone-shot--front {
-  top: 44px;
-  left: 62px;
+  top: 78px;
+  left: 236px;
   z-index: 2;
   transform: rotate(4deg);
   box-shadow: 0 40px 70px -24px rgba(0, 0, 0, 0.4);
 }
-.feature:hover .phone-shot--back { transform: rotate(-8deg) translateY(-4px); }
-.feature:hover .phone-shot--front { transform: rotate(5deg) translateY(-4px); }
+.feature:hover .phone-shot--back { transform: rotate(-7deg) translateY(-4px); }
+.feature:hover .phone-shot--front { transform: rotate(6deg) translateY(-4px); }
+
+.phone-callout {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.65rem 1.15rem;
+  font-family: "Inter", var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 16px 32px -14px rgba(28, 23, 18, 0.3);
+}
+.phone-callout svg { width: 18px; height: 18px; flex: none; }
+.phone-callout--engage {
+  top: -18px;
+  left: -36px;
+  color: var(--maroon);
+  transform: rotate(-4deg);
+}
+.phone-callout--save {
+  top: -30px;
+  right: -34px;
+  color: var(--accent-2);
+  transform: rotate(3deg);
+}
+.phone-callout--discover {
+  bottom: 6px;
+  left: -60px;
+  color: var(--ink);
+  font-family: "Figtree", var(--sans);
+  text-transform: lowercase;
+  transform: rotate(-3deg);
+}
+.phone-callout--discover svg { color: var(--accent); }
 .phone-app__status {
   display: flex;
   align-items: center;
@@ -663,6 +701,25 @@ a { color: inherit; text-decoration: none; }
   aspect-ratio: 1 / 1;
 }
 .phone-app__photo.tall { aspect-ratio: 3 / 4; }
+.phone-app__photo-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.phone-app__photo-wrap .phone-app__photo { width: 100%; height: 100%; aspect-ratio: auto; }
+.phone-app__photo-tag {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  background: rgba(28, 23, 18, 0.68);
+  color: #fff;
+  font-size: 0.56rem;
+  font-weight: 500;
+  padding: 3px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 .phone-app__tag-card {
   aspect-ratio: 1 / 1;
   border-radius: 10px;
@@ -895,6 +952,17 @@ a { color: inherit; text-decoration: none; }
 
   .feature__text { max-width: none; }
   .footer__bottom { flex-direction: column; gap: 0.5rem; }
+}
+
+@media (max-width: 600px) {
+  .phone-stack { width: 320px; height: 394px; }
+  .phone-shot { width: 152px; }
+  .phone-shot--front { top: 56px; left: 168px; }
+  .phone-callout { font-size: 0.72rem; padding: 0.5rem 0.85rem; }
+  .phone-callout svg { width: 15px; height: 15px; }
+  .phone-callout--engage { top: -14px; left: -20px; }
+  .phone-callout--save { top: -22px; right: -18px; }
+  .phone-callout--discover { bottom: 0; left: -34px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

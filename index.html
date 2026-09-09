@@ -159,9 +159,22 @@
           </div>
         </div>
         <div class="feature__media reveal">
-          <!-- Explore: two raw app screenshots stacked/overlapping, no
-               phone bezel — just the images as-is. -->
+          <!-- Explore: two raw app screenshots, no phone bezel — just the
+               images as-is, with floating callouts like the reference. -->
           <div class="tab-panel is-active phone-stack" data-panel="explore">
+            <span class="phone-callout phone-callout--engage">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-10-9.3C.5 7.8 2 4 5.8 4c2 0 3.5 1.1 4.2 2.6C10.7 5.1 12.2 4 14.2 4 18 4 19.5 7.8 18 11.2c-2.5 4.7-6 9.3-6 9.3z"/></svg>
+              Engage with others
+            </span>
+            <span class="phone-callout phone-callout--save">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-10-9.3C.5 7.8 2 4 5.8 4c2 0 3.5 1.1 4.2 2.6C10.7 5.1 12.2 4 14.2 4 18 4 19.5 7.8 18 11.2c-2.5 4.7-6 9.3-6 9.3z"/></svg>
+              Save inspiration for later
+            </span>
+            <span class="phone-callout phone-callout--discover">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2.2 5.4-5.4 2.2 2.2-5.4z"/></svg>
+              discover new styles
+            </span>
+
             <div class="phone-shot phone-shot--back">
               <div class="phone-app__status">
                 <span>2:42</span>
@@ -183,8 +196,17 @@
                 <img class="phone-app__photo tall" src="images/style-4.png" alt="" />
                 <img class="phone-app__photo tall" src="images/style-5.png" alt="" />
                 <img class="phone-app__photo" src="images/style-1.png" alt="" />
+                <img class="phone-app__photo" src="images/style-2.png" alt="" />
+                <img class="phone-app__photo tall" src="images/style-3.png" alt="" />
               </div>
               <button type="button" class="phone-app__fab" aria-hidden="true">+</button>
+              <nav class="phone-app__nav" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2.2 5.4-5.4 2.2 2.2-5.4z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><path d="M8.3 7.8L19 19M8.3 16.2L19 5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9.5a6 6 0 1 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 13.5 6 9.5Z"/><path d="M10 18a2 2 0 0 0 4 0"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1-4 4.4-6 7-6s6 2 7 6"/></svg>
+              </nav>
             </div>
             <div class="phone-shot phone-shot--front">
               <div class="phone-app__status">
@@ -203,7 +225,10 @@
                 <span class="phone-app__filter">braidout</span>
               </div>
               <div class="phone-app__masonry">
-                <img class="phone-app__photo" src="images/style-1.png" alt="" />
+                <div class="phone-app__photo-wrap">
+                  <img class="phone-app__photo" src="images/style-1.png" alt="" />
+                  <span class="phone-app__photo-tag">&#9986;&nbsp; Solea Beauty</span>
+                </div>
                 <img class="phone-app__photo tall" src="images/style-2.png" alt="" />
                 <img class="phone-app__photo tall" src="images/style-3.png" alt="" />
                 <img class="phone-app__photo" src="images/style-4.png" alt="" />
@@ -211,6 +236,13 @@
                 <img class="phone-app__photo" src="images/style-5.png" alt="" />
               </div>
               <button type="button" class="phone-app__fab" aria-hidden="true">+</button>
+              <nav class="phone-app__nav" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2.2 5.4-5.4 2.2 2.2-5.4z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><path d="M8.3 7.8L19 19M8.3 16.2L19 5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9.5a6 6 0 1 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 13.5 6 9.5Z"/><path d="M10 18a2 2 0 0 0 4 0"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1-4 4.4-6 7-6s6 2 7 6"/></svg>
+              </nav>
             </div>
           </div>
 
