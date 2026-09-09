@@ -40,7 +40,7 @@
            displacement strength. -->
       <filter id="rough-edge-sm" x="-20%" y="-40%" width="140%" height="180%">
         <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.9" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
   </svg>
@@ -152,15 +152,16 @@
           <p class="eyebrow">01 &mdash; Clients</p>
           <h2>Everything for your hair, in one place.</h2>
           <div class="tabs" role="tablist" aria-label="Client features">
-            <button type="button" class="tab-pill tab-pill--cream is-active" data-tab="discover" role="tab" aria-selected="true">Discover</button>
-            <button type="button" class="tab-pill tab-pill--olive" data-tab="your-hair" role="tab" aria-selected="false">Your hair</button>
-            <button type="button" class="tab-pill tab-pill--rust" data-tab="book" role="tab" aria-selected="false">Book</button>
+            <button type="button" class="tab-pill tab-pill--cream is-active" data-tab="explore" role="tab" aria-selected="true">Explore</button>
+            <button type="button" class="tab-pill tab-pill--olive" data-tab="community" role="tab" aria-selected="false">Community</button>
+            <button type="button" class="tab-pill tab-pill--rust" data-tab="providers" role="tab" aria-selected="false">Service Providers</button>
+            <button type="button" class="tab-pill tab-pill--maroon" data-tab="your-hair" role="tab" aria-selected="false">Your hair</button>
           </div>
         </div>
         <div class="feature__media reveal">
           <div class="phone">
             <div class="phone__screen">
-              <div class="tab-panel is-active" data-panel="discover">
+              <div class="tab-panel is-active" data-panel="explore">
                 <span class="phone__tag">Explore</span>
                 <div class="phone__grid">
                   <span class="tile tile--braids"></span>
@@ -168,6 +169,22 @@
                   <span class="tile tile--wash"></span>
                   <span class="tile tile--locs wide"></span>
                 </div>
+              </div>
+              <div class="tab-panel" data-panel="community">
+                <span class="phone__tag">Community</span>
+                <ul class="phone__list">
+                  <li><strong>Jade M.</strong> &middot; Silk press results<span>142 likes &middot; 18 comments</span></li>
+                  <li><strong>Priya S.</strong> &middot; My locs journey, month 6<span>96 likes &middot; 11 comments</span></li>
+                  <li><strong>Devon L.</strong> &middot; Wash day routine<span>73 likes &middot; 9 comments</span></li>
+                </ul>
+              </div>
+              <div class="tab-panel" data-panel="providers">
+                <span class="phone__tag">Nearby</span>
+                <ul class="phone__list">
+                  <li><strong>Amara J.</strong> &middot; Locs &amp; retwists<span>4.9 &middot; Brooklyn, NY</span></li>
+                  <li><strong>Maya K.</strong> &middot; Knotless braids<span>4.8 &middot; Queens, NY</span></li>
+                  <li><strong>Devon L.</strong> &middot; Silk press<span>4.9 &middot; Manhattan, NY</span></li>
+                </ul>
               </div>
               <div class="tab-panel" data-panel="your-hair">
                 <span class="phone__tag">Profile</span>
@@ -177,15 +194,6 @@
                   <div><dt>Density</dt><dd>Medium</dd></div>
                   <div><dt>Scalp type</dt><dd>Dry</dd></div>
                   <div><dt>Goal</dt><dd>Protective styling</dd></div>
-                </dl>
-              </div>
-              <div class="tab-panel" data-panel="book">
-                <span class="phone__tag">Upcoming</span>
-                <dl class="phone__spec">
-                  <div><dt>Provider</dt><dd>Amara J.</dd></div>
-                  <div><dt>Service</dt><dd>Locs retwist</dd></div>
-                  <div><dt>When</dt><dd>Sat &middot; 11:30am</dd></div>
-                  <div><dt>Deposit</dt><dd>Paid</dd></div>
                 </dl>
               </div>
             </div>
