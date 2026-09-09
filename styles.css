@@ -535,7 +535,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== Phone mockup ===== */
 .phone {
-  width: 250px;
+  width: 280px;
   border-radius: 36px;
   background: var(--dark);
   padding: 12px;
@@ -550,6 +550,7 @@ a { color: inherit; text-decoration: none; }
   padding: 22px 17px;
   min-height: 430px;
   position: relative;
+  overflow: hidden;
 }
 .phone__screen::before {
   content: "";
@@ -582,6 +583,102 @@ a { color: inherit; text-decoration: none; }
 .tile--silk   { background: linear-gradient(155deg, #f4c463, var(--silk)); }
 .tile--wash   { background: var(--bg-alt); }
 .tile--locs   { background: linear-gradient(155deg, #e0954f, var(--locs)); }
+
+/* ===== Explore panel: realistic app-screenshot chrome =====
+   Pulls flush to the phone screen's own edges (offsetting its padding)
+   so the status bar and bottom nav read as part of the phone frame
+   rather than floating inside a card. */
+.phone-app {
+  position: relative;
+  margin: -22px -17px -22px;
+  height: calc(100% + 44px);
+  min-height: 474px;
+  display: flex;
+  flex-direction: column;
+}
+.phone-app__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.phone-app__status-icons { display: flex; align-items: center; gap: 4px; color: var(--ink); }
+.phone-app__status-icons svg { width: 15px; height: 11px; }
+.phone-app__filters {
+  display: flex;
+  gap: 6px;
+  padding: 8px 16px 10px;
+  overflow-x: hidden;
+}
+.phone-app__filter {
+  flex: none;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--bg-alt);
+  color: var(--ink-soft);
+  font-size: 0.66rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.phone-app__filter.is-active { background: var(--maroon); color: #fff; }
+.phone-app__masonry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 0 16px 16px;
+  flex: 1;
+  overflow: hidden;
+}
+.phone-app__photo {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1;
+}
+.phone-app__photo.tall { aspect-ratio: 3 / 4; }
+.phone-app__tag-card {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: var(--brown-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.phone-app__fab {
+  position: absolute;
+  right: 16px;
+  bottom: 58px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  font-size: 1.15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+}
+.phone-app__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 10px;
+  border-top: 1px solid var(--line);
+  background: #fdfbf6;
+}
+.phone-app__nav svg { width: 18px; height: 18px; color: var(--ink-soft); }
+.phone-app__nav svg:first-child { color: var(--accent); }
 
 .phone__spec { display: flex; flex-direction: column; }
 .phone__spec div {
