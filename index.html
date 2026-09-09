@@ -35,6 +35,13 @@
         <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
         <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
       </filter>
+      <!-- Lighter version for h2 (and smaller) headings, which render at a
+           smaller size than the hero h1 and get illegible at the same
+           displacement strength. -->
+      <filter id="rough-edge-sm" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
     </defs>
   </svg>
 
