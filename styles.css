@@ -649,12 +649,11 @@ a { color: inherit; text-decoration: none; }
 .phone-callout--discover {
   bottom: 32px;
   left: -76px;
-  color: var(--ink);
+  color: var(--accent);
   font-family: "Figtree", var(--sans);
   text-transform: lowercase;
   transform: rotate(-3deg);
 }
-.phone-callout--discover svg { color: var(--accent); }
 
 .phone__spec { display: flex; flex-direction: column; }
 .phone__spec div {
