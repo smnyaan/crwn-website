@@ -655,7 +655,6 @@ a { color: inherit; text-decoration: none; }
   left: -76px;
   color: var(--accent);
   font-family: "Figtree", var(--sans);
-  text-transform: lowercase;
   transform: rotate(-3deg);
 }
 
