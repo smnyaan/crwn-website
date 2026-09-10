@@ -213,6 +213,10 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.2s var(--ease);
 }
 .tab-pill:hover { opacity: 0.85; }
+.tab-pill:focus-visible {
+  outline: 3px solid var(--maroon);
+  outline-offset: 3px;
+}
 .tab-pill.is-active {
   opacity: 1;
   box-shadow: 0 10px 22px -10px rgba(0, 0, 0, 0.35);
