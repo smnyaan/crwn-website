@@ -686,6 +686,32 @@ a { color: inherit; text-decoration: none; }
 .community-cards:hover .community-card--2 { transform: rotate(6deg) translateY(-10px); }
 .community-cards:hover .community-card--3 { transform: rotate(-6deg) translateY(-10px); }
 
+/* ===== Providers panel: real profile/review screenshots, scattered ===== */
+.provider-cards {
+  position: relative;
+  width: 470px;
+  height: 515px;
+}
+.provider-card {
+  position: absolute;
+  transition: transform 0.4s var(--ease);
+}
+.provider-card--book    { top: 0px;   left: 0px;   width: 110px; z-index: 5; }
+.provider-card--profile { top: 44px;  left: 0px;   width: 270px; z-index: 1; }
+.provider-card--photo1  { top: 68px;  left: 316px; width: 140px; z-index: 2; }
+.provider-card--photo2  { top: 275px; left: 5px;   width: 150px; z-index: 2; }
+.provider-card--pill    { top: 268px; left: 170px; width: 175px; z-index: 4; }
+.provider-card--review  { top: 335px; left: 195px; width: 270px; z-index: 3; }
+.provider-card--crowns  { top: 470px; left: 175px; width: 95px;  z-index: 3; }
+
+.provider-cards:hover .provider-card--book    { transform: translateY(-6px); }
+.provider-cards:hover .provider-card--profile { transform: translateY(-6px); }
+.provider-cards:hover .provider-card--photo1  { transform: rotate(3deg) translateY(-8px); }
+.provider-cards:hover .provider-card--photo2  { transform: rotate(-3deg) translateY(-8px); }
+.provider-cards:hover .provider-card--pill    { transform: translateY(-8px); }
+.provider-cards:hover .provider-card--review  { transform: translateY(-8px); }
+.provider-cards:hover .provider-card--crowns  { transform: translateY(-6px); }
+
 .phone__spec { display: flex; flex-direction: column; }
 .phone__spec div {
   display: flex;
@@ -896,6 +922,15 @@ a { color: inherit; text-decoration: none; }
   .community-card--2 { top: 198px; left: 44px; }
   .community-card--3 { top: 338px; left: 10px; }
   .community-badge { width: 200px; }
+
+  .provider-cards { width: 330px; height: 362px; }
+  .provider-card--book    { width: 77px; }
+  .provider-card--profile { top: 31px;  left: 0px;   width: 190px; }
+  .provider-card--photo1  { top: 48px;  left: 222px; width: 98px; }
+  .provider-card--photo2  { top: 193px; left: 4px;   width: 105px; }
+  .provider-card--pill    { top: 188px; left: 119px; width: 123px; }
+  .provider-card--review  { top: 235px; left: 137px; width: 190px; }
+  .provider-card--crowns  { top: 330px; left: 123px; width: 67px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
