@@ -619,8 +619,8 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(4deg);
   box-shadow: 0 40px 70px -24px rgba(0, 0, 0, 0.4);
 }
-.phone-shot--back:hover { transform: rotate(-7deg) translateY(-4px); }
-.phone-shot--front:hover { transform: rotate(6deg) translateY(-4px); }
+.phone-stack:hover .phone-shot--back { transform: rotate(-7deg) translateY(-4px); }
+.phone-stack:hover .phone-shot--front { transform: rotate(6deg) translateY(-4px); }
 
 .phone-callout {
   position: absolute;
@@ -673,7 +673,7 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.4s var(--ease);
   transform: translateX(-50%) rotate(0deg);
 }
-.community-badge:hover { transform: translateX(-50%) translateY(-8px) rotate(-3deg); }
+.community-cards:hover .community-badge { transform: translateX(-50%) translateY(-8px) rotate(-3deg); }
 .community-card {
   position: absolute;
   width: 300px;
@@ -682,9 +682,9 @@ a { color: inherit; text-decoration: none; }
 .community-card--1 { top: 60px; left: 4px; z-index: 1; transform: rotate(-1deg); }
 .community-card--2 { top: 232px; left: 56px; z-index: 2; transform: rotate(1deg); }
 .community-card--3 { top: 404px; left: 12px; z-index: 1; transform: rotate(-1deg); }
-.community-card--1:hover { transform: rotate(-6deg) translateY(-10px); z-index: 5; }
-.community-card--2:hover { transform: rotate(6deg) translateY(-10px); z-index: 5; }
-.community-card--3:hover { transform: rotate(-6deg) translateY(-10px); z-index: 5; }
+.community-cards:hover .community-card--1 { transform: rotate(-6deg) translateY(-10px); }
+.community-cards:hover .community-card--2 { transform: rotate(6deg) translateY(-10px); }
+.community-cards:hover .community-card--3 { transform: rotate(-6deg) translateY(-10px); }
 
 .phone__spec { display: flex; flex-direction: column; }
 .phone__spec div {
