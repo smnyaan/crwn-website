@@ -658,6 +658,52 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(-3deg);
 }
 
+/* ===== Community panel: real post-card screenshots, cascading ===== */
+.community-cards {
+  position: relative;
+  width: 360px;
+  height: 460px;
+}
+.community-badge {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 0.7rem 1.2rem;
+  white-space: nowrap;
+  box-shadow: 0 16px 32px -14px rgba(28, 23, 18, 0.3);
+}
+.community-badge__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.community-badge__icon svg { width: 20px; height: 20px; }
+.community-badge__text { display: flex; flex-direction: column; }
+.community-badge__text strong { font-family: var(--sans); font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+.community-badge__text span { font-size: 0.8rem; color: var(--ink-soft); }
+.community-card {
+  position: absolute;
+  width: 300px;
+  transition: transform 0.4s var(--ease);
+}
+.community-card--1 { top: 60px; left: 4px; z-index: 1; }
+.community-card--2 { top: 232px; left: 56px; z-index: 2; }
+.feature:hover .community-card--1 { transform: translateY(-4px); }
+.feature:hover .community-card--2 { transform: translateY(-4px); }
+
 .phone__spec { display: flex; flex-direction: column; }
 .phone__spec div {
   display: flex;
@@ -861,6 +907,16 @@ a { color: inherit; text-decoration: none; }
   .phone-callout--engage { top: -28px; left: -12px; }
   .phone-callout--save { top: 3px; right: -24px; }
   .phone-callout--discover { bottom: 18px; left: -12px; }
+
+  .community-cards { width: 300px; height: 400px; }
+  .community-card { width: 250px; }
+  .community-card--1 { top: 54px; left: 2px; }
+  .community-card--2 { top: 198px; left: 44px; }
+  .community-badge { padding: 0.55rem 0.95rem; gap: 9px; }
+  .community-badge__icon { width: 32px; height: 32px; }
+  .community-badge__icon svg { width: 16px; height: 16px; }
+  .community-badge__text strong { font-size: 0.82rem; }
+  .community-badge__text span { font-size: 0.7rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
