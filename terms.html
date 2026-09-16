@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRWN — Terms &amp; Conditions</title>
+  <meta
+    name="description"
+    content="The terms that govern using CRWN's websites, apps, booking tools, and marketplace."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Figtree:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-banner" id="appBanner" hidden>
+    <div class="app-banner__inner">
+      <span class="app-banner__text">Get the CRWN app</span>
+      <a href="#" class="app-banner__cta" id="appBannerLink">Open</a>
+      <button type="button" class="app-banner__close" id="appBannerClose" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Rough-edge filter for headlines: warps the glyph outlines themselves
+       (not a texture drawn over them) for a hand-stamped look. -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough-edge" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="rough-edge-sm" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.9" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">crwn<span>.</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#clients">Clients</a>
+        <a href="index.html#providers">Providers</a>
+        <a href="index.html#why">Why CRWN</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://crwn-five.vercel.app/" target="_blank" rel="noopener" class="btn btn--maroon">Explore CRWN</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Legal: Terms & Conditions ===== -->
+    <section class="section legal">
+      <div class="container legal__head reveal">
+        <p class="eyebrow">Legal</p>
+        <h1>Terms &amp; Conditions</h1>
+        <p class="legal__meta">Version 2.1 &middot; Effective September 1, 2026 &middot; Last updated September 1, 2026</p>
+      </div>
+
+      <div class="container legal__body">
+        <nav class="legal__toc" aria-label="Terms &amp; Conditions chapters">
+          <p class="legal__toc-heading">On this page</p>
+          <a href="#acceptance">1. Acceptance, Definitions &amp; Eligibility</a>
+          <a href="#accounts">2. Accounts &amp; Community Standards</a>
+          <a href="#content-ip">3. User Content &amp; IP</a>
+          <a href="#provider-terms">4. Provider Terms</a>
+          <a href="#bookings-payments">5. Bookings &amp; Payments</a>
+          <a href="#reviews">6. Reviews &amp; Ratings</a>
+          <a href="#privacy-data">7. Privacy, Data &amp; Communications</a>
+          <a href="#health-safety">8. Health, Safety &amp; Third Parties</a>
+          <a href="#liability">9. Risk, Liability &amp; Indemnification</a>
+          <a href="#termination">10. Suspension &amp; Termination</a>
+          <a href="#disputes">11. Dispute Resolution</a>
+          <a href="#misc">12. Miscellaneous</a>
+        </nav>
+
+        <article class="legal__content">
+          <p>
+            These Terms form a binding agreement governing access to CRWN's websites, mobile
+            applications, social features, marketplace, booking tools, payment functionality,
+            and related services (collectively, the &ldquo;Platform&rdquo;). They should be read
+            together with our <a href="privacy.html">Privacy Policy</a>.
+          </p>
+
+          <h2 id="acceptance">1. Acceptance, Definitions, and Eligibility</h2>
+
+          <h3>1.1 Acceptance and incorporated policies</h3>
+          <p>
+            By accessing or using the Platform, creating an Account, posting User Content,
+            booking a Service, or offering a Service, you agree to these Terms and any policies
+            expressly incorporated by reference, including the Privacy Policy, Community
+            Guidelines, Booking and Cancellation Policy, Stylist Standards, and promotional rules
+            then in effect. If you act for an entity, you represent that you can bind it.
+          </p>
+          <p>
+            If you do not agree, do not use the Platform. Mandatory rights that cannot lawfully
+            be waived remain unaffected.
+          </p>
+
+          <h3>1.2 Definitions</h3>
+          <p>
+            &ldquo;Client&rdquo; means a User seeking or purchasing a Service. &ldquo;Provider&rdquo;
+            means a stylist, barber, braider, loctician, salon, or other beauty professional
+            offering Services. &ldquo;Booking&rdquo; means a request that becomes confirmed
+            through the Platform. &ldquo;Service&rdquo; means a beauty or related service offered
+            by a Provider. &ldquo;User Content&rdquo; means content submitted by a User.
+            &ldquo;Fees&rdquo; include Platform, booking, processing, cancellation, travel,
+            add-on, tax, and other disclosed charges. &ldquo;Payment Processor&rdquo; means
+            Stripe or any successor processor. &ldquo;CRWN,&rdquo; &ldquo;we,&rdquo;
+            &ldquo;us,&rdquo; and &ldquo;our&rdquo; mean CRWN Inc., a Delaware corporation.
+          </p>
+
+          <h3>1.3 Eligibility and minors</h3>
+          <p>
+            Account holders must be at least 13 years old. Users aged 13&ndash;17
+            (&ldquo;Teens&rdquo;) may create an Account and use Platform features made available
+            to Teens, subject to verifiable parental or legal guardian consent and any additional
+            protections CRWN applies to Teen accounts. A parent or legal guardian who permits a
+            Teen's use of the Platform accepts responsibility for that use and must personally
+            authorize any booking, payment, and image publication involving the Teen. Children
+            under 13 may not use the Platform.
+          </p>
+
+          <h3>1.4 Geography, changes, and electronic communications</h3>
+          <p>
+            Availability varies by location. CRWN may add, change, suspend, or discontinue
+            features, subject to applicable law. Material changes to these Terms will be notified
+            by reasonable means and will apply prospectively from the stated effective date. You
+            consent to electronic records, notices, receipts, and signatures; marketing messages
+            remain subject to consent and opt-out rights.
+          </p>
+          <p>
+            The Platform is intended for use within the United States. If you access it from
+            outside the United States, you do so on your own initiative and are responsible for
+            compliance with local law. By using the Platform, you consent to the collection,
+            processing, and storage of your information in the United States as described in the
+            Privacy Policy.
+          </p>
+
+          <h2 id="accounts">2. Accounts, Community Standards, and Acceptable Use</h2>
+          <p>
+            CRWN is intended to support a safe, authentic, inclusive community centered on
+            textured hair and beauty services.
+          </p>
+
+          <h3>2.1 Account registration and security</h3>
+          <p>
+            You must provide complete, accurate, current information; protect credentials; use
+            multi-factor authentication if offered; and promptly report unauthorized access. You
+            are responsible for activity under your Account to the extent permitted by law. CRWN
+            may require identity, age, business, tax, or professional verification and may reject
+            misleading usernames or impersonation.
+          </p>
+
+          <h3>2.2 Acceptable use</h3>
+          <p>
+            You may not use the Platform to violate law or third-party rights; harass, threaten,
+            exploit, discriminate, or promote hate or violence; distribute malware; bypass access
+            controls; scrape or automate access without written permission; manipulate ranking or
+            engagement; create fake Accounts; impersonate others; collect personal information
+            without authority; spam; or facilitate unlawful goods, services, or payments.
+          </p>
+
+          <h3>2.3 Communications and off-platform conduct</h3>
+          <p>
+            Messaging is for legitimate Platform activity. A message alone does not confirm a
+            Booking. Users may not use Platform information to evade disclosed Fees, divert a
+            Platform-originated transaction off-platform, solicit prohibited payment methods, or
+            conceal a transaction. CRWN cannot protect, support, or mediate off-platform
+            transactions, and repeated circumvention may lead to restrictions where permitted by
+            law.
+          </p>
+
+          <h3>2.4 Reports, moderation, and appeals</h3>
+          <p>
+            Users may flag content, messages, reviews, listings, or conduct using designated
+            reporting tools. CRWN may triage reports using automated systems and human review;
+            preserve evidence; limit reach or functionality; remove content; issue warnings;
+            suspend or terminate Accounts; and refer suspected illegality or imminent harm to
+            appropriate authorities. CRWN does not guarantee a particular response time or
+            result. An affected User may appeal through the designated channel within 30 days,
+            unless safety, legal, repeat-abuse, or technical constraints make review unavailable.
+          </p>
+
+          <h2 id="content-ip">3. User Content and Intellectual Property</h2>
+          <p>
+            This chapter allocates content rights, protects CRWN's technology and brand, and
+            establishes a copyright process.
+          </p>
+
+          <h3>3.1 Ownership and license</h3>
+          <p>
+            You retain ownership of User Content. You grant CRWN a worldwide, non-exclusive,
+            royalty-free, sublicensable, transferable license to host, store, reproduce, adapt
+            for technical formatting and accessibility, distribute, display, perform, translate,
+            and otherwise use User Content solely to operate, improve, secure, promote, and
+            provide the Platform, consistent with your settings and applicable law. The license
+            ends when content is deleted, except for reasonable backup, legal-compliance,
+            enforcement, and previously authorized uses.
+          </p>
+
+          <h3>3.2 Your representations</h3>
+          <p>
+            You represent that you own or have all rights, permissions, model releases, music
+            rights, location permissions, privacy consents, and professional authorizations
+            necessary for your User Content; that it is accurate where presented as factual; and
+            that it does not infringe, defame, expose confidential information, or violate law.
+            Before-and-after images may not be materially manipulated or presented in a
+            misleading way.
+          </p>
+
+          <h3>3.3 Client images and minors</h3>
+          <p>
+            A Provider must obtain a Client's informed, documented permission before capturing or
+            posting an identifiable image for portfolio, marketing, or social use, and must honor
+            the scope and withdrawal terms of that permission. Service consent does not equal
+            publicity consent. Images of a minor require prior written consent from the minor's
+            parent or legal guardian and must comply with CRWN's minor-safety rules. CRWN may
+            require proof of consent and remove content if proof is inadequate.
+          </p>
+
+          <h3>3.4 CRWN intellectual property and feedback</h3>
+          <p>
+            The Platform, software, designs, trademarks, logos, compilation, and CRWN-created
+            content are owned by CRWN or its licensors. No implied license is granted. If you
+            provide feedback, you grant CRWN a perpetual, irrevocable, worldwide, royalty-free
+            right to use it without restriction or compensation, without identifying you unless
+            permitted.
+          </p>
+
+          <h3>3.5 Copyright notices and counter-notices</h3>
+          <p>
+            CRWN will maintain a process consistent with applicable copyright law. A notice
+            should identify the copyrighted work, the allegedly infringing material and its
+            location, the complaining party's contact information, good-faith and accuracy
+            statements, authority to act, and a physical or electronic signature. A
+            counter-notice should identify removed material and its prior location, include the
+            required good-faith statement and consent to appropriate jurisdiction, provide
+            contact information, and bear a signature. Send notices to
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>
+            <em>(designated agent registration with the U.S. Copyright Office pending)</em>.
+            CRWN may forward notices, restore material when legally appropriate, and terminate
+            repeat infringers under a reasonably implemented policy.
+          </p>
+
+          <h2 id="provider-terms">4. Provider Terms and Marketplace Standards</h2>
+          <p>
+            Providers are independent businesses responsible for the lawful, safe, and
+            professional delivery of their Services.
+          </p>
+
+          <h3>4.1 Independent provider status</h3>
+          <p>
+            A Provider is not CRWN's employee, agent, franchisee, partner, or joint venturer and
+            has no authority to bind CRWN. Providers control their lawful methods, schedules,
+            tools, and business operations, subject to these Terms and marketplace standards.
+            Nothing in these Terms overrides a classification required by applicable law.
+          </p>
+
+          <h3>4.2 Licensing, verification, insurance, and taxes</h3>
+          <p>
+            Each Provider must maintain every license, registration, permit, certification,
+            inspection, bond, and insurance policy required for each Service and location;
+            provide authentic evidence on request; immediately disclose expiration, suspension,
+            discipline, claims, or restrictions; and independently determine and pay taxes.
+            Verification is point-in-time and not an endorsement or guarantee. CRWN may
+            re-verify, limit listings, or pause payouts while reviewing eligibility.
+          </p>
+
+          <h3>4.3 Listings, pricing, portfolios, and availability</h3>
+          <p>
+            Listings must accurately describe scope, price, duration, location, qualifications,
+            products, limitations, preparation requirements, deposit, cancellation terms, travel
+            charges, add-ons, and availability. Providers may not use bait pricing, undisclosed
+            mandatory add-ons, copied portfolios, materially altered result images, false
+            credentials, or unavailable time slots. Optional services must be affirmatively
+            selected and clearly priced before confirmation.
+          </p>
+
+          <h3>4.4 Safety, sanitation, and professional conduct</h3>
+          <p>
+            Providers must follow infection-control, sanitation, product-label, workplace, and
+            facility requirements; use clean tools and safe products; assess contraindications
+            within their professional scope; obtain informed service consent; maintain
+            appropriate records; protect Client privacy; and stop a Service when continuing would
+            present an unreasonable risk. Providers may not diagnose or treat medical conditions
+            outside lawful scope.
+          </p>
+
+          <h3>4.5 Hair preparation and client-supplied items</h3>
+          <p>
+            Providers must disclose preparation requirements before confirmation, including
+            detangling, washing, drying, extension hair, product restrictions, timing, and
+            consequences of noncompliance. A Provider may charge a disclosed preparation or
+            rescheduling fee only if shown before Booking and permitted by law. Responsibility
+            for client-supplied hair, products, or accessories must be disclosed; neither party
+            may misrepresent quality, safety, or compatibility.
+          </p>
+
+          <h3>4.6 Mobile services, travel, and premises</h3>
+          <p>
+            Travel zones, mileage or flat travel charges, parking, tolls, stairs, access
+            requirements, and cancellation consequences must be disclosed before confirmation.
+            Providers are responsible for lawful, safe travel and an appropriate workspace.
+            Clients must disclose material access, pet, smoking, parking, or safety conditions.
+            Either party may end an appointment if the location presents a credible safety risk,
+            subject to review of any Fees.
+          </p>
+
+          <h3>4.7 Provider enforcement</h3>
+          <p>
+            CRWN may use progressive enforcement, including education or one warning for a first
+            remediable violation, but no User is entitled to a warning. CRWN may immediately
+            remove or suspend a Provider for fraud, violence, harassment, discrimination, unsafe
+            practice, exploitation, false licensing, repeated no-shows, review manipulation,
+            chargeback abuse, off-platform evasion, or other serious or repeated misconduct.
+            Payouts may be held where reasonably necessary to investigate or cover authorized
+            obligations.
+          </p>
+
+          <h2 id="bookings-payments">5. Bookings, Payments, Fees, Cancellations, and Payouts</h2>
+
+          <h3>5.1 Booking formation and service contract</h3>
+          <p>
+            A Booking is confirmed only when the Platform displays confirmation and any required
+            payment authorization succeeds. Unless checkout expressly states that CRWN is the
+            seller or merchant of record, the Service contract is between Client and Provider;
+            CRWN supplies marketplace and payment technology. CRWN is not a party to the
+            professional Service and does not control its performance, except for platform rules
+            and remedies.
+          </p>
+
+          <h3>5.2 Prices and Platform fees</h3>
+          <p>
+            Checkout will show the Service price and applicable deposit, Platform commission,
+            Client service fee, processing fee, travel fee, add-ons, gratuity, tax, and other
+            mandatory charges before purchase. Provider payouts may equal amounts collected for
+            the Service less CRWN commissions, processor charges, refunds, credits, disputes,
+            taxes withheld, reserves, and other authorized deductions. Fee rates may change
+            prospectively after notice. CRWN will not retroactively change a confirmed Booking
+            except to correct an obvious error or as required by law.
+          </p>
+
+          <h3>5.3 Payment authorization and processor terms</h3>
+          <p>
+            You authorize CRWN and its Payment Processor to collect, tokenize, verify, and charge
+            your selected payment method for confirmed amounts and later-authorized adjustments.
+            Payment services may require a connected account and acceptance of processor
+            agreements. CRWN does not store full payment-card credentials when the processor
+            handles them. A failed, expired, reversed, or unauthorized payment may result in
+            Booking cancellation, collection attempts, Account restrictions, or lawful recovery
+            costs.
+          </p>
+
+          <h3>5.4 Deposits, completion, and final charges</h3>
+          <p>
+            A deposit may be refundable, partially refundable, or nonrefundable only as clearly
+            disclosed and permitted by law. The balance may be charged at the disclosed time,
+            including upon confirmation, before the appointment, or after Provider completion.
+            Changes made during an appointment require Client authorization through the Platform
+            or another documented method. Tips are voluntary unless a disclosed service charge is
+            expressly identified as mandatory.
+          </p>
+
+          <h3>5.5 Cancellations, rescheduling, lateness, and no-shows</h3>
+          <p>
+            The applicable cancellation window, late-cancellation charge, grace period,
+            rescheduling limit, and no-show charge must be presented before confirmation. A
+            Client is a no-show only after the disclosed grace period and reasonable contact
+            efforts. Provider cancellations or material lateness may entitle the Client to refund
+            or credit. CRWN may consider emergencies, unsafe conditions, discrimination, force
+            majeure, and applicable consumer law when adjusting a charge.
+            <em>Specific windows, percentages, and exceptions for this policy are being finalized.</em>
+          </p>
+
+          <h3>5.6 Refunds and Platform-fee treatment</h3>
+          <p>
+            Refund eligibility depends on the Booking Policy, service performance, evidence, and
+            law. CRWN may issue a full or partial refund, credit, re-performance referral, or
+            denial. The checkout or policy must state whether each Platform, processing, travel,
+            add-on, and cancellation Fee is refundable. Nothing limits a nonwaivable statutory
+            refund right. Refund timing depends on the Payment Processor and issuing bank.
+          </p>
+
+          <h3>5.7 Provider payouts, holds, reserves, and delays</h3>
+          <p>
+            Payout timing is an estimate, not a guarantee. CRWN or the Payment Processor may
+            delay, reverse, offset, or hold funds for identity or tax verification, suspected
+            fraud, complaints, cancellations, refunds, disputes, sanctions screening, negative
+            balances, processor requirements, legal process, or risk reserves. Providers
+            authorize deductions from current or future payouts for amounts they owe. CRWN will
+            provide notice when reasonably practicable unless prohibited or likely to compromise
+            an investigation.
+          </p>
+
+          <h3>5.8 Negative balances and recovery</h3>
+          <p>
+            If refunds, disputes, fees, reversals, taxes, or other authorized deductions exceed
+            available funds, the Provider must promptly cure the negative balance. To the extent
+            permitted by law and processor terms, CRWN or the Payment Processor may offset future
+            payouts, debit an authorized bank account, establish a reserve, suspend payouts, or
+            pursue collection.
+          </p>
+
+          <h3>5.9 Disputes and chargebacks</h3>
+          <p>
+            A User should first contact CRWN at <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>.
+            Clients retain lawful card-dispute rights, but must not knowingly submit a false or
+            duplicative claim. Providers must timely supply appointment records, communications,
+            consent, cancellation evidence, and proof of service. CRWN may accept or contest a
+            dispute, pass through dispute fees where disclosed and lawful, reverse transfers, and
+            recover losses from the responsible User.
+          </p>
+
+          <h3>5.10 Taxes and reporting</h3>
+          <p>
+            Displayed taxes are estimates unless stated otherwise. Each Provider is responsible
+            for determining registration, collection, reporting, and payment duties except where
+            CRWN is legally required to collect, withhold, report, or remit. Users must provide
+            accurate taxpayer information and authorize required tax forms and reporting. CRWN
+            does not provide tax advice.
+          </p>
+
+          <h2 id="reviews">6. Reviews, Ratings, and Marketplace Integrity</h2>
+          <p>Reviews should reflect genuine experiences and help Users make informed decisions.</p>
+
+          <h3>6.1 Eligibility and authenticity</h3>
+          <p>
+            Only eligible Users with a genuine interaction may submit a review. Reviews must
+            reflect the author's honest experience and may not contain knowingly false claims,
+            threats, private information, discriminatory content, or irrelevant commercial
+            promotion.
+          </p>
+
+          <h3>6.2 Prohibited manipulation</h3>
+          <p>
+            Users may not buy, sell, fabricate, suppress, condition, trade, or coordinate
+            reviews; review their own business; use relatives, employees, bots, or duplicate
+            Accounts to distort ratings; offer compensation conditioned on positive sentiment;
+            threaten retaliation for a negative review; or selectively solicit only satisfied
+            Clients where that would be misleading.
+          </p>
+
+          <h3>6.3 Moderation and responses</h3>
+          <p>
+            CRWN may use automated signals and human review to detect abuse, label incentives,
+            limit distribution, remove ineligible or policy-violating content, merge duplicates,
+            or preserve a review during investigation. CRWN does not remove a review solely
+            because it is negative. Providers may post a professional response that respects
+            privacy. Review decisions may be appealed through the reporting process.
+          </p>
+
+          <h2 id="privacy-data">7. Privacy, Data, and Communications</h2>
+          <p>
+            The <a href="privacy.html">Privacy Policy</a> &mdash; not this chapter alone &mdash;
+            provides complete, jurisdiction-specific disclosure of CRWN's data practices.
+          </p>
+
+          <h3>7.1 Privacy Policy and data categories</h3>
+          <p>
+            CRWN may process identifiers, profile and account data, content, messages where
+            necessary to operate or protect the service, booking and transaction records, device
+            and usage data, approximate or precise location with permission, professional
+            credentials, support records, and inferences.
+          </p>
+
+          <h3>7.2 Service providers, advertising, and &ldquo;sale&rdquo; or &ldquo;sharing&rdquo; disclosures</h3>
+          <p>
+            CRWN may disclose data to processors and service providers for payments, hosting,
+            analytics, maps, messaging, verification, safety, support, and legal compliance.
+            CRWN may share aggregated or de-identified data (for example, hair-trend information)
+            that does not identify any User, as described in the Privacy Policy. Such sharing is
+            not considered a sale or sharing of personal information.
+          </p>
+
+          <h3>7.3 Security, retention, and account deletion</h3>
+          <p>
+            CRWN will use reasonable administrative, technical, and organizational safeguards,
+            but no system is perfectly secure. CRWN retains information for the periods
+            reasonably necessary for service delivery, safety, disputes, tax and accounting,
+            legal compliance, and enforcement, then deletes or de-identifies it under its
+            retention schedule. Account deletion may not immediately remove backups, transaction
+            records, legal holds, or content retained by others.
+          </p>
+
+          <h3>7.4 User choices and rights</h3>
+          <p>
+            Subject to location and exceptions, Users may have rights to access, correct, delete,
+            port, restrict, or object to processing; opt out of certain advertising or data uses;
+            limit certain sensitive-data processing; and appeal a denial. Transactional and
+            security communications cannot be disabled while the Account remains active;
+            marketing choices may be changed at any time.
+          </p>
+
+          <h3>7.5 Location, contacts, and sensitive information</h3>
+          <p>
+            CRWN will request device permission before accessing precise location or contacts
+            and will explain the feature purpose. Users should not post health information,
+            identity documents, financial credentials, or other sensitive information in public
+            content or ordinary messages.
+          </p>
+
+          <h2 id="health-safety">8. Health, Safety, and Third-Party Services</h2>
+          <p>
+            Beauty Services can involve allergies, chemical exposure, tools, traction, heat, and
+            other risks. CRWN is a technology platform, not a medical provider.
+          </p>
+
+          <h3>8.1 Health disclaimer and informed decisions</h3>
+          <p>
+            Information on CRWN is general and not medical advice, diagnosis, or treatment. Users
+            should review ingredients and instructions, disclose relevant allergies or
+            sensitivities, request patch or strand testing when appropriate, and consult a
+            qualified clinician for symptoms or medical questions. In an emergency, contact local
+            emergency services.
+          </p>
+
+          <h3>8.2 Third-party services and dependencies</h3>
+          <p>
+            The Platform may depend on Stripe, app stores, cloud hosting, maps and geocoding,
+            Twilio (phone verification and messaging), Meta/Instagram (for Providers who choose
+            to connect an Instagram account), identity verification, analytics, and other third
+            parties. Their services and terms may apply. CRWN does not control their
+            availability, security, accuracy, or decisions and may change providers or
+            functionality. Links and integrations are not endorsements.
+          </p>
+
+          <h3>8.3 Accessibility and accommodations</h3>
+          <p>
+            CRWN seeks to make the Platform reasonably accessible and invites reports at
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>. Providers are independently
+            responsible for accommodations and premises obligations that apply to their
+            businesses. Nothing in these Terms authorizes unlawful discrimination or limits
+            nonwaivable accessibility rights.
+          </p>
+
+          <h3>8.4 Disclaimer of warranties</h3>
+          <p>
+            To the maximum extent permitted by law, the Platform is provided &ldquo;as is&rdquo;
+            and &ldquo;as available.&rdquo; CRWN disclaims implied warranties of
+            merchantability, fitness for a particular purpose, title, and non-infringement. CRWN
+            does not warrant uninterrupted operation, particular results, Provider quality,
+            licensing status between verification events, or the accuracy of User Content. Some
+            jurisdictions do not allow some of these disclaimers.
+          </p>
+
+          <h2 id="liability">9. Risk Allocation, Liability, and Indemnification</h2>
+
+          <h3>9.1 Marketplace risk</h3>
+          <p>
+            Users assume the ordinary risks of interacting with other Users and obtaining or
+            providing Services. CRWN does not supervise appointments or guarantee identity,
+            credentials, safety, compatibility, results, or conduct. Verification, ratings,
+            badges, and moderation reduce but do not eliminate risk.
+          </p>
+
+          <h3>9.2 Limitation of liability</h3>
+          <p>
+            To the maximum extent permitted by law, CRWN and its affiliates, officers,
+            directors, employees, agents, and licensors will not be liable for indirect,
+            incidental, special, consequential, exemplary, or punitive damages; lost profits,
+            data, goodwill, or opportunity; or User-to-User conduct or Services, even if advised
+            of the possibility. CRWN's aggregate liability arising from the Platform will not
+            exceed the greater of (a) amounts you paid to CRWN in the 12 months before the event
+            or (b) US $100, except where law requires a different remedy. This limitation does
+            not apply to liability that cannot lawfully be limited, including as applicable
+            fraud, willful misconduct, or certain personal injury or statutory rights.
+          </p>
+
+          <h3>9.3 Indemnification</h3>
+          <p>
+            To the extent permitted by law, you will defend, indemnify, and hold harmless CRWN
+            and its affiliates from third-party claims, losses, liabilities, damages, judgments,
+            penalties, and reasonable fees arising from your User Content, Services, business,
+            breach of these Terms, infringement, taxes, unlawful conduct, or dispute with another
+            User. CRWN will give reasonable notice and may control the defense; you may not
+            settle in a way that admits CRWN fault or imposes obligations without written
+            consent.
+          </p>
+
+          <h2 id="termination">10. Suspension, Termination, and Survival</h2>
+
+          <h3>10.1 User closure</h3>
+          <p>
+            You may close your Account through available settings or by contacting support.
+            Closure does not cancel completed obligations, erase amounts owed, or automatically
+            remove content retained for lawful reasons. Providers must complete or appropriately
+            cancel outstanding Bookings and resolve balances.
+          </p>
+
+          <h3>10.2 CRWN action</h3>
+          <p>
+            CRWN may investigate, warn, restrict, suspend, remove content, pause Bookings or
+            payouts, or terminate access when reasonably believed necessary for a breach, risk,
+            legal request, fraud, safety issue, processor requirement, prolonged inactivity, or
+            Platform discontinuation. Where appropriate, CRWN will provide notice and an appeal
+            opportunity; immediate or confidential action may be taken for urgent, repeated, or
+            legally sensitive matters.
+          </p>
+
+          <h3>10.3 Effect and survival</h3>
+          <p>
+            Upon termination, licenses granted to you end. Provisions that by nature should
+            survive &mdash; including ownership, payment, tax, disputes, disclaimers, liability
+            limits, indemnity, enforcement records, and miscellaneous terms &mdash; will survive.
+            Termination does not waive accrued rights or obligations.
+          </p>
+
+          <h2 id="disputes">11. Dispute Resolution and Governing Law</h2>
+          <p>
+            <em>This chapter may affect your right to bring a lawsuit, participate in a class
+            action, or have a jury decide a dispute.</em>
+          </p>
+
+          <h3>11.1 Informal resolution</h3>
+          <p>
+            Before filing a covered claim, the claimant must send a written Notice of Dispute to
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a> describing the name and Account,
+            facts, requested relief, and contact details. The parties will confer in good faith
+            for 60 days. Limitations periods are tolled during that period where lawful. Either
+            party may seek emergency injunctive relief or bring an eligible individual
+            small-claims action.
+          </p>
+
+          <h3>11.2 Arbitration election</h3>
+          <p>
+            <em>The specific binding-arbitration provider, rules, and procedures for this section
+            are still being finalized and are not yet in effect.</em> Where adopted, this section
+            will describe the arbitration provider and rules, Federal Arbitration Act language,
+            hearing location or remote process, fees, batch or mass-arbitration procedure,
+            severability, and an opt-out method with deadline.
+          </p>
+
+          <h3>11.3 Class and jury waiver</h3>
+          <p>
+            <em>Whether covered disputes must proceed only on an individual basis (not as a
+            class, collective, consolidated, representative, or private-attorney-general action)
+            and whether jury trial is waived is still being finalized.</em> Nonwaivable
+            public-injunctive-relief rights remain available in all cases.
+          </p>
+
+          <h3>11.4 Governing law and venue</h3>
+          <p>
+            These Terms are governed by the laws of the State of Delaware, without regard to
+            conflict rules, except that the Federal Arbitration Act governs any arbitration
+            provision. For claims not subject to arbitration, the parties consent to the state
+            and federal courts located in Delaware
+            <em>(specific venue county to be confirmed)</em>, unless consumer law requires
+            another forum.
+          </p>
+
+          <h2 id="misc">12. Miscellaneous Provisions</h2>
+
+          <h3>12.1 No waiver; severability; interpretation</h3>
+          <p>
+            A failure to enforce is not a waiver. If a provision is unenforceable, it will be
+            enforced to the maximum lawful extent and the remainder continues, subject to any
+            specific dispute-resolution severability rule. &ldquo;Including&rdquo; means
+            &ldquo;including without limitation.&rdquo; Headings are for convenience. The English
+            version controls only to the extent lawful.
+          </p>
+
+          <h3>12.2 Assignment and third-party beneficiaries</h3>
+          <p>
+            You may not assign these Terms without CRWN's written consent. CRWN may assign them
+            in connection with a merger, financing, reorganization, asset transfer, or by
+            operation of law, with required notice. Except for indemnified parties and as
+            expressly stated, there are no third-party beneficiaries.
+          </p>
+
+          <h3>12.3 Force majeure</h3>
+          <p>
+            Neither party is liable for delay caused by events beyond reasonable control,
+            including natural disasters, epidemics, war, terrorism, civil unrest, labor
+            disruption, utility or internet failure, government action, or failure of critical
+            third-party infrastructure. This does not excuse payment obligations already incurred
+            or duties that law does not permit to be excused, and the affected party must use
+            reasonable mitigation efforts.
+          </p>
+
+          <h3>12.4 Export controls and sanctions</h3>
+          <p>
+            You may not use the Platform if prohibited by applicable trade sanctions or
+            export-control laws, and may not use it for a prohibited end use or person. CRWN may
+            screen, block, or report activity as required by law.
+          </p>
+
+          <h3>12.5 Entire agreement and order of precedence</h3>
+          <p>
+            These Terms and incorporated policies are the entire agreement regarding the Platform
+            and supersede prior platform-use agreements. A signed written provider agreement
+            controls over these Terms only where it expressly says so. A feature-specific policy
+            controls for that feature; mandatory law controls over conflicting terms.
+          </p>
+
+          <h3>12.6 Notices and contact</h3>
+          <p>
+            Legal notices to CRWN must be sent to
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a> and to CRWN Inc.'s registered
+            agent: Platinum Filings LLC, 555 E. Loockerman Street, Suite 320, Dover, DE 19901,
+            and are effective upon confirmed receipt, unless law requires another method. CRWN
+            may notify Users through the Platform, Account email, or other lawful means. Support,
+            privacy, copyright, and accessibility requests can all be sent to
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer">crwn<span>.</span></a>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/crwn.hq" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@crwn.hq" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c0 2.5 2 4.5 4.5 4.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/crwnhq" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="7.5" cy="6.8" r="0.6" fill="currentColor" stroke="none"/><line x1="7.5" y1="10" x2="7.5" y2="17"/><line x1="12" y1="10" x2="12" y2="17"/><path d="M12 13.2c0-1.5 1.1-2.6 2.5-2.6s2.5 1.1 2.5 2.6V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Get the app">
+        <p class="footer__heading">Get the app</p>
+        <a href="#" class="store-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16.7 12.4c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7 1.4 0 1.8.7 3 .7 1.2 0 2-1.1 2.8-2.2.6-.9.9-1.4 1.3-2.3-.1 0-2.4-.9-2.5-3.6zM14.7 5.4c.6-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.1-.5 2.8-1.4z"/></svg>
+          <span>App Store</span>
+        </a>
+        <a href="#" class="store-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M6 3.5v17l14-8.5-14-8.5z"/></svg>
+          <span>Google Play</span>
+        </a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Contact">
+        <p class="footer__heading">Contact</p>
+        <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>
+      </nav>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>Copyright 2026 CRWN Inc.</p>
+      <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
