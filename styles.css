@@ -1119,6 +1119,113 @@ a { color: inherit; text-decoration: none; }
   .phone-shot--front { opacity: 0; }
 }
 
+/* ===== Legal pages (Privacy, Terms) ===== */
+.legal { padding: 3.5rem 0 2rem; }
+.legal__head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+.legal__head h1 {
+  color: var(--brick);
+  font-family: var(--serif);
+  filter: url(#rough-edge-sm);
+  margin: 0.5rem 0 0.25rem;
+}
+.legal__meta {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.legal__body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+.legal__toc {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.legal__toc-heading {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+.legal__toc a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  padding: 0.32rem 0 0.32rem 0.75rem;
+  border-left: 2px solid var(--line);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.legal__toc a:hover {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+.legal__content { max-width: 680px; }
+.legal__content h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  margin: 2.75rem 0 1rem;
+  scroll-margin-top: 96px;
+}
+.legal__content h2:first-of-type { margin-top: 0; }
+.legal__content h3 {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.75rem 0 0.75rem;
+  scroll-margin-top: 96px;
+}
+.legal__content p {
+  margin-bottom: 1.1rem;
+  line-height: 1.7;
+}
+.legal__content ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+.legal__content li {
+  margin-bottom: 0.6rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.legal__content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .legal__body { grid-template-columns: 1fr; gap: 2rem; }
+  .legal__toc {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .legal__toc a {
+    border-left: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    white-space: nowrap;
+    font-size: 0.78rem;
+  }
+  .legal__toc a:hover { border-color: var(--accent); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }

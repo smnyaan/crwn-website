@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRWN — Privacy Policy</title>
+  <meta
+    name="description"
+    content="How CRWN collects, uses, and protects your personal information."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Figtree:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-banner" id="appBanner" hidden>
+    <div class="app-banner__inner">
+      <span class="app-banner__text">Get the CRWN app</span>
+      <a href="#" class="app-banner__cta" id="appBannerLink">Open</a>
+      <button type="button" class="app-banner__close" id="appBannerClose" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Rough-edge filter for headlines: warps the glyph outlines themselves
+       (not a texture drawn over them) for a hand-stamped look. -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough-edge" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="rough-edge-sm" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.9" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">crwn<span>.</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#clients">Clients</a>
+        <a href="index.html#providers">Providers</a>
+        <a href="index.html#why">Why CRWN</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://crwn-five.vercel.app/" target="_blank" rel="noopener" class="btn btn--maroon">Explore CRWN</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Legal: Privacy Policy ===== -->
+    <section class="section legal">
+      <div class="container legal__head reveal">
+        <p class="eyebrow">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p class="legal__meta">Version 2.2 &middot; Effective August 27, 2026 &middot; Last updated August 27, 2026</p>
+      </div>
+
+      <div class="container legal__body">
+        <nav class="legal__toc reveal" aria-label="Privacy Policy sections">
+          <p class="legal__toc-heading">On this page</p>
+          <a href="#introduction">1. Introduction and Scope</a>
+          <a href="#information-we-collect">2. Information We Collect</a>
+          <a href="#how-we-use">3. How We Use Information</a>
+          <a href="#how-we-share">4. How We Share Information</a>
+          <a href="#cookies">5. Cookies and Tracking</a>
+          <a href="#your-rights">6. Your Privacy Rights</a>
+          <a href="#retention">7. Data Retention</a>
+          <a href="#security">8. Data Security</a>
+          <a href="#children">9. Children's and Teens Privacy</a>
+          <a href="#providers-notice">10. Provider-Specific Notices</a>
+          <a href="#international">11. International Users</a>
+          <a href="#changes">12. Changes to This Policy</a>
+          <a href="#contact">13. Contact Us</a>
+        </nav>
+
+        <article class="legal__content">
+          <p>
+            CRWN connects Clients who are booking beauty and personal-care services with
+            independent Providers who deliver them, and handles payment between the two. This
+            Privacy Policy explains, in plain terms, what personal information we collect to
+            make that possible, how we use and share it, and the choices you have. It covers
+            CRWN's websites, mobile apps, booking tools, and related services (the
+            &ldquo;Platform&rdquo;), and applies to Clients, Providers, and visitors. It should
+            be read together with our
+            <a href="legal/crwn-terms-and-conditions.pdf">Terms &amp; Conditions</a>.
+            &ldquo;CRWN,&rdquo; &ldquo;we,&rdquo; and &ldquo;us&rdquo; refer to CRWN Inc., a
+            Delaware corporation.
+          </p>
+          <p>
+            This Policy is drafted for CRWN's current United States operations. Because Clients
+            and Providers use the Platform differently, some sections below are marked to show
+            which group they apply to.
+          </p>
+
+          <h2 id="introduction">1. Introduction and Scope</h2>
+          <p>
+            This Policy applies to everyone who uses the CRWN Platform &mdash; Clients booking
+            services, Providers offering them, and visitors browsing the site &mdash; and covers
+            our websites, mobile apps, booking tools, and related services.
+          </p>
+
+          <h2 id="information-we-collect">2. Information We Collect</h2>
+          <p>
+            We collect information in three ways: what you give us directly, what we collect
+            automatically as you use the Platform, and what we receive from others.
+          </p>
+
+          <h3>2.1 Information you give us</h3>
+          <ul>
+            <li>Account information: name, email address, phone number, password, and profile photo.</li>
+            <li>Booking information: service selections, appointment times, location, and any special requests or notes you add for a Provider.</li>
+            <li>Provider information: business name, license or certification numbers, portfolio images, service menu and pricing, and tax identification information.</li>
+            <li>Payment information: billing name and address. Card and bank details are entered directly into our payment processor, Stripe, and are not stored on CRWN's own servers.</li>
+            <li>Communications: messages between Clients and Providers sent through the Platform, and anything you send to CRWN support.</li>
+          </ul>
+
+          <h3>2.2 Information we collect automatically</h3>
+          <ul>
+            <li>Device and usage data: IP address, device identifiers, browser type, operating system, pages or screens viewed, and interaction timestamps.</li>
+            <li>Location data: approximate or precise location, where you enable it, used to show nearby Providers or verify a Service address.</li>
+            <li>Product analytics and crash reporting, used to understand how the app is performing and where people run into trouble.</li>
+          </ul>
+
+          <h3>2.3 Information we receive from others</h3>
+          <ul>
+            <li>Payment confirmation and fraud-risk signals from Stripe.</li>
+            <li>Results from identity-verification or background-check providers, where CRWN uses one as part of Provider onboarding.</li>
+            <li>A masked version of your contact details, if you have booked with another Provider on the Platform before, so a new Provider can send you a booking confirmation without seeing your full email or phone number until you complete a booking with them.</li>
+            <li>Instagram profile and content, if a Provider chooses to connect their Instagram account. We receive certain profile information and media (such as photos) via Meta's Instagram API, used only to help populate that Provider's CRWN portfolio, and only to the extent the Provider authorizes.</li>
+            <li>Providers can disconnect their Instagram account at any time in Account Settings, which immediately stops any further data collection through the Instagram API. To request deletion of Instagram-sourced content already imported to CRWN (such as previously synced photos), contact <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>.</li>
+          </ul>
+
+          <h2 id="how-we-use">3. How We Use Information</h2>
+          <p>
+            We use personal information to run the marketplace, keep it safe, and improve it
+            &mdash; not to build advertising profiles for sale to third parties.
+          </p>
+          <ul>
+            <li>Operate the Platform: create and manage accounts, process bookings, run payments and payouts, and connect Clients with Providers.</li>
+            <li>Communicate with you: send booking confirmations, digital receipts, service updates, and respond to support requests.</li>
+            <li>Trust and safety: verify Provider credentials, screen for fraud, investigate policy violations, and enforce our Terms &amp; Conditions.</li>
+            <li>Improve the Platform: analyze usage trends, troubleshoot issues, and develop new features.</li>
+            <li>Marketing: send product updates or promotions where permitted, with an opt-out available at any time.</li>
+            <li>Legal compliance: meet tax, accounting, consumer-protection, and other legal obligations.</li>
+          </ul>
+
+          <h2 id="how-we-share">4. How We Share Information</h2>
+          <ul>
+            <li>Between Clients and Providers, as needed to complete a booking &mdash; for example, sharing a Client's name, contact details, and appointment notes with the Provider they booked, and a Provider's business information with the Client.</li>
+            <li>With service providers who perform functions on our behalf, including Stripe (payments), Twilio (phone number verification), Meta/Instagram (for Providers who choose to connect their Instagram account), cloud hosting, identity verification, and customer-support tools, under confidentiality and data-processing obligations.</li>
+            <li>For legal reasons: to comply with a law, subpoena, or court order, or to protect the rights, safety, or property of CRWN, our users, or the public.</li>
+            <li>In a business transfer, such as a merger, acquisition, financing, or sale of assets, where personal information is one of the transferred assets.</li>
+          </ul>
+
+          <h3>4.1 What We Do Not Do</h3>
+          <p>
+            CRWN does not sell or share your name, phone number, email address, or other
+            information that identifies you, and we do not share that information with third
+            parties for their own marketing or advertising purposes.
+          </p>
+          <p>
+            We may, now or in the future, share aggregated or de-identified information &mdash;
+            for example, trends in hair type, texture, styling preferences, or service demand
+            across our user base &mdash; with third parties such as hair care and beauty
+            companies, for research, product development, or industry insight. This information
+            is stripped of names, contact details, and other identifiers before it is shared, and
+            we contractually restrict recipients from attempting to re-identify it.
+          </p>
+
+          <h2 id="cookies">5. Cookies and Tracking Technologies</h2>
+          <p>
+            CRWN and its service providers use cookies, SDKs, and similar technologies to
+            operate the Platform, remember preferences, measure performance, and, where
+            applicable, personalize marketing.
+          </p>
+          <ul>
+            <li>Essential: required for login, security, and core booking functionality.</li>
+            <li>Analytics: help us understand how the Platform is used.</li>
+            <li>Marketing: used to measure or deliver advertising, where enabled.</li>
+          </ul>
+          <p>
+            A current, itemized list of the specific cookies and SDKs in use, including their
+            purpose and duration, is available on request at
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>. We currently do not respond to
+            browser &ldquo;Do Not Track&rdquo; signals, but we do honor the Global Privacy
+            Control and similar opt-out preference signals where required by law.
+          </p>
+
+          <h2 id="your-rights">6. Your Privacy Rights</h2>
+          <h3>6.1 All users</h3>
+          <ul>
+            <li>Access, correct, or update your account information directly in the app or by contacting <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>.</li>
+            <li>Request deletion of your account and associated personal information, subject to legal retention requirements (for example, tax records).</li>
+            <li>Opt out of marketing communications using the unsubscribe link or your in-app notification settings. Opting out of marketing does not stop transactional messages like booking confirmations or receipts.</li>
+          </ul>
+
+          <h3>6.2 California residents (CCPA/CPRA)</h3>
+          <ul>
+            <li>Right to know the categories and specific pieces of personal information we've collected.</li>
+            <li>Right to delete personal information, subject to exceptions.</li>
+            <li>Right to correct inaccurate personal information.</li>
+            <li>Right to opt out of the sale or sharing of personal information and out of certain profiling. CRWN does not sell or share personal information that identifies you (such as your name, phone number, or email address). As described in Section 4, we may share aggregated or de-identified information, which does not identify you and is not considered a &ldquo;sale&rdquo; of personal information under the CCPA.</li>
+            <li>Right to non-discrimination for exercising these rights.</li>
+          </ul>
+
+          <h3>6.3 Other U.S. states</h3>
+          <p>
+            Residents of states with comprehensive privacy laws (including Virginia, Colorado,
+            Connecticut, Utah, Texas, and Oregon) have similar rights to access, correct, and
+            delete their personal information and to opt out of certain targeted advertising,
+            profiling, or sale, and may exercise them using the contact information below.
+          </p>
+
+          <h3>6.4 How to exercise your rights</h3>
+          <p>
+            Submit a request to <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>. We will
+            verify your identity before responding and will respond within the time required by
+            applicable law. If we deny a request, you may ask us to reconsider by replying to our
+            response.
+          </p>
+
+          <h2 id="retention">7. Data Retention</h2>
+          <p>
+            CRWN keeps personal information only as long as needed to provide the Platform, meet
+            legal obligations, resolve disputes, and enforce our agreements. In general:
+          </p>
+          <ul>
+            <li>Account and booking records: for the life of the account, plus 3 years after closure.</li>
+            <li>Payment and transaction records: 7 years, to meet tax and financial record-keeping obligations.</li>
+            <li>Support communications: 3 years from the date of the last interaction.</li>
+            <li>Marketing preferences and opt-outs: retained until you request deletion, so we can continue to honor your choice.</li>
+          </ul>
+          <p>
+            When information is no longer needed, we delete it or de-identify it so it can no
+            longer be used to identify you.
+          </p>
+
+          <h2 id="security">8. Data Security</h2>
+          <p>
+            CRWN uses administrative, technical, and physical safeguards designed to protect
+            personal information, including encryption of data in transit, access controls
+            limiting who can view personal information internally, and payment processing
+            through Stripe's PCI DSS&ndash;compliant infrastructure, so CRWN itself never sees or
+            stores full card numbers. If a breach compromising personal information occurs, we
+            will notify affected users and regulators as required by applicable law. No method of
+            transmission or storage is completely secure, and CRWN cannot guarantee absolute
+            security.
+          </p>
+
+          <h2 id="children">9. Children's and Teens Privacy</h2>
+          <p>
+            CRWN is available to users age 13 and older. The Platform is not directed to children
+            under 13, and we do not knowingly collect personal information from anyone under 13.
+            If we learn that we have collected personal information from a child under 13, we
+            will delete it as soon as possible.
+          </p>
+          <p>
+            Users between the ages of 13 and 17 ('Teens') may only use CRWN consistent with the
+            age eligibility requirements in our Terms &amp; Conditions. We encourage parents and
+            guardians to be involved in a teen's use of the Platform, including any in-person
+            appointments booked with a Provider.
+          </p>
+
+          <h2 id="providers-notice">10. Provider-Specific Notices</h2>
+          <p>
+            This section applies specifically to Providers. In the course of delivering a
+            Service, a Provider may collect Client information, such as contact details and
+            service preferences shared directly with them or noted for a return visit. Providers
+            are independently responsible for their own handling of that information and must
+            comply with applicable privacy and data-protection law, separate from CRWN's
+            obligations as the Platform operator.
+          </p>
+
+          <h2 id="international">11. International Users</h2>
+          <p>
+            CRWN is designed for use in the United States &mdash; our Providers, bookings, and
+            payment processing are U.S.-based. We do not currently restrict access based on
+            location, so individuals outside the United States may be able to access the
+            Platform. If you access CRWN from outside the United States, your personal
+            information will be transferred to, processed, and stored in the United States,
+            where privacy laws may differ from those in your country. By using the Platform, you
+            consent to this transfer. CRWN does not currently tailor its data practices to the
+            specific legal requirements of other countries, and if you're located outside the
+            U.S., protections available under your local law may not apply to your use of CRWN.
+          </p>
+
+          <h2 id="changes">12. Changes to This Policy</h2>
+          <p>
+            We may update this Policy from time to time. If we make a material change, we will
+            notify you through the Platform or by email before it takes effect. The &ldquo;Last
+            Updated&rdquo; date above reflects the most recent revision.
+          </p>
+
+          <h2 id="contact">13. Contact Us</h2>
+          <p>
+            Questions about this Policy or your personal information:
+            <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer">crwn<span>.</span></a>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/crwn.hq" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@crwn.hq" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c0 2.5 2 4.5 4.5 4.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/crwnhq" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="7.5" cy="6.8" r="0.6" fill="currentColor" stroke="none"/><line x1="7.5" y1="10" x2="7.5" y2="17"/><line x1="12" y1="10" x2="12" y2="17"/><path d="M12 13.2c0-1.5 1.1-2.6 2.5-2.6s2.5 1.1 2.5 2.6V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Get the app">
+        <p class="footer__heading">Get the app</p>
+        <a href="#" class="store-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16.7 12.4c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7 1.4 0 1.8.7 3 .7 1.2 0 2-1.1 2.8-2.2.6-.9.9-1.4 1.3-2.3-.1 0-2.4-.9-2.5-3.6zM14.7 5.4c.6-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.1-.5 2.8-1.4z"/></svg>
+          <span>App Store</span>
+        </a>
+        <a href="#" class="store-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M6 3.5v17l14-8.5-14-8.5z"/></svg>
+          <span>Google Play</span>
+        </a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Contact">
+        <p class="footer__heading">Contact</p>
+        <a href="mailto:crwn@crwnhq.com">crwn@crwnhq.com</a>
+      </nav>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>Copyright 2026 CRWN Inc.</p>
+      <p><a href="privacy.html">Privacy</a> &middot; <a href="legal/crwn-terms-and-conditions.pdf">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
