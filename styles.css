@@ -1017,6 +1017,25 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 600px) {
+  .palette { gap: 10px; }
+  .style-card { width: calc(50% - 5px); }
+
+  .audiences__glow { display: none; }
+  .card { position: relative; }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 138, 44, 0.4), transparent 70%);
+    filter: blur(6px);
+  }
+  .card--providers::before {
+    background: radial-gradient(circle, rgba(179, 93, 43, 0.4), transparent 70%);
+  }
+  .card--providers { margin-left: 0; }
+
   .phone-stack { width: 320px; height: 394px; }
   .phone-shot { width: 152px; }
   .phone-shot--front { top: 56px; left: 168px; }
