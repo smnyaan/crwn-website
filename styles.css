@@ -226,7 +226,6 @@ a { color: inherit; text-decoration: none; }
 .tab-pill--olive  { background: var(--olive); color: #fff; }
 .tab-pill--rust   { background: var(--accent); color: #fff; }
 .tab-pill--maroon { background: var(--maroon); color: #fff; }
-.tab-pill--tan    { background: #8a6a3a; color: #fff; }
 
 .tab-panel { display: none; }
 .tab-panel.is-active { display: block; }
@@ -988,6 +987,7 @@ a { color: inherit; text-decoration: none; }
   .nav, .header__actions { display: none; }
   .nav-toggle { display: flex; }
   .hero__sub { white-space: normal; max-width: 460px; }
+  .audiences__glow { width: min(420px, 94%); }
 
   .site-header.is-open .nav {
     display: flex;
