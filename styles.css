@@ -726,7 +726,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 40px;
   width: 460px;
-  padding-top: 40px;
+  padding-top: 76px;
 }
 .hairel-badge {
   position: absolute;
@@ -749,7 +749,7 @@ a { color: inherit; text-decoration: none; }
 }
 .hairel-badge svg { width: 19px; height: 19px; flex: none; }
 .hairel-row { display: flex; gap: 18px; justify-content: center; }
-.hairel-col { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.hairel-col { display: flex; flex-direction: column; align-items: center; gap: 32px; }
 .hairel-label {
   background: #82554d;
   color: #e8ddd0;
@@ -773,7 +773,7 @@ a { color: inherit; text-decoration: none; }
   background: #c8bd9f;
   border-radius: 16px;
   box-shadow: 0 4px 34px rgba(93, 31, 31, 0.25);
-  transform: rotate(3deg);
+  transform: translate(9px, 9px);
 }
 .hairel-card {
   position: absolute;
@@ -1036,11 +1036,11 @@ a { color: inherit; text-decoration: none; }
   .provider-card--review  { top: 235px; left: 137px; width: 190px; }
   .provider-card--crowns  { top: 330px; left: 123px; width: 67px; }
 
-  .tab-panel.hairel-cards.is-active { width: 330px; gap: 30px; padding-top: 42px; }
+  .tab-panel.hairel-cards.is-active { width: 330px; gap: 30px; padding-top: 56px; }
   .hairel-badge { font-size: 0.66rem; padding: 0.5rem 0.8rem; gap: 6px; }
   .hairel-badge svg { width: 14px; height: 14px; }
   .hairel-row { gap: 14px; }
-  .hairel-col { gap: 14px; }
+  .hairel-col { gap: 22px; }
   .hairel-label { font-size: 0.7rem; padding: 0.45rem 0.85rem; }
   .hairel-card-wrap { width: 108px; height: 133px; }
   .hairel-card { border-radius: 12px; padding-top: 10px; }
