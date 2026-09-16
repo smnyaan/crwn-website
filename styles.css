@@ -725,7 +725,7 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  width: 460px;
+  width: 540px;
   padding-top: 76px;
 }
 .hairel-badge {
@@ -733,6 +733,7 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   left: 50%;
   transform: translateX(-50%) rotate(-2.45deg);
+  transition: transform 0.4s var(--ease);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -748,7 +749,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 4px 20px rgba(254, 190, 90, 0.4);
 }
 .hairel-badge svg { width: 19px; height: 19px; flex: none; }
-.hairel-row { display: flex; gap: 18px; justify-content: center; }
+.hairel-row { display: flex; gap: 44px; justify-content: center; }
 .hairel-col { display: flex; flex-direction: column; align-items: center; gap: 32px; }
 .hairel-label {
   background: #82554d;
@@ -762,6 +763,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   white-space: nowrap;
   box-shadow: 0 4px 34px rgba(93, 31, 31, 0.25);
+  transition: transform 0.4s var(--ease);
 }
 .hairel-col--1 .hairel-label { transform: rotate(-5.64deg); }
 .hairel-col--2 .hairel-label { transform: rotate(0deg); }
@@ -812,9 +814,13 @@ a { color: inherit; text-decoration: none; }
 .hairel-card__circle img { width: 56%; height: auto; display: block; }
 .hairel-col--2 .hairel-card__circle img { width: 34%; }
 .hairel-col--3 .hairel-card__circle img { width: 62%; }
-.hairel-card-wrap:hover .hairel-card { transform: translateY(-6px); }
-.hairel-col--1 .hairel-card-wrap:hover .hairel-card { transform: rotate(-5.79deg) translateY(-6px); }
-.hairel-col--3 .hairel-card-wrap:hover .hairel-card { transform: rotate(6.43deg) translateY(-6px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-badge { transform: translateX(-50%) rotate(-2.45deg) translateY(-6px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-col--1 .hairel-label { transform: rotate(-5.64deg) translateY(-6px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-col--2 .hairel-label { transform: translateY(-6px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-col--3 .hairel-label { transform: rotate(6.43deg) translateY(-6px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-col--1 .hairel-card { transform: rotate(-9deg) translateY(-8px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-col--2 .hairel-card { transform: rotate(-3deg) translateY(-8px); }
+.tab-panel.hairel-cards.is-active:hover .hairel-col--3 .hairel-card { transform: rotate(10deg) translateY(-8px); }
 
 .phone__spec { display: flex; flex-direction: column; }
 .phone__spec div {
@@ -1036,13 +1042,13 @@ a { color: inherit; text-decoration: none; }
   .provider-card--review  { top: 235px; left: 137px; width: 190px; }
   .provider-card--crowns  { top: 330px; left: 123px; width: 67px; }
 
-  .tab-panel.hairel-cards.is-active { width: 330px; gap: 30px; padding-top: 56px; }
+  .tab-panel.hairel-cards.is-active { width: 336px; gap: 30px; padding-top: 56px; }
   .hairel-badge { font-size: 0.66rem; padding: 0.5rem 0.8rem; gap: 6px; }
   .hairel-badge svg { width: 14px; height: 14px; }
-  .hairel-row { gap: 14px; }
+  .hairel-row { gap: 20px; }
   .hairel-col { gap: 22px; }
   .hairel-label { font-size: 0.7rem; padding: 0.45rem 0.85rem; }
-  .hairel-card-wrap { width: 108px; height: 133px; }
+  .hairel-card-wrap { width: 96px; height: 118px; }
   .hairel-card { border-radius: 12px; padding-top: 10px; }
   .hairel-card__peek { border-radius: 12px; }
   .hairel-card__title { font-size: 0.78rem; }
