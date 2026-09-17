@@ -931,6 +931,81 @@ a { color: inherit; text-decoration: none; }
 }
 .phone__rows li span { color: var(--accent); font-weight: 500; font-size: 0.78rem; }
 
+/* ===== Payment tab: "connect with Stripe" panel ===== */
+.payout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 12px;
+}
+.payout__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--maroon) 12%, var(--bg));
+  color: var(--maroon);
+  margin-bottom: 14px;
+}
+.payout__icon svg { width: 24px; height: 24px; }
+.payout__title {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.payout__body {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.payout__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--maroon);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.3rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.payout__cta svg { width: 17px; height: 17px; flex: none; }
+.payout__cta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(93, 31, 31, 0.5); }
+.payout__stripe { font-weight: 700; }
+.payout__checklist {
+  list-style: none;
+  text-align: left;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.payout__checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+.payout__checklist svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  margin-top: 1px;
+  color: var(--maroon);
+}
+
 /* ===== Community ===== */
 .community { text-align: center; }
 .community h2 { margin-bottom: 1.4rem; }

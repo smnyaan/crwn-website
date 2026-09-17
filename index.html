@@ -284,11 +284,35 @@
               </div>
               <div class="tab-panel" data-panel="payment">
                 <span class="phone__tag">Payment</span>
-                <dl class="phone__spec">
-                  <div><dt>This week</dt><dd>$420</dd></div>
-                  <div><dt>Pending payout</dt><dd>$180</dd></div>
-                  <div><dt>Last payout</dt><dd>Mar 3</dd></div>
-                </dl>
+                <div class="payout">
+                  <span class="payout__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="10.5" y2="14.5"/></svg>
+                  </span>
+                  <h3 class="payout__title">Get paid for your work</h3>
+                  <p class="payout__body">
+                    Connect a Stripe account so clients can pay you directly
+                    through CRWN once you accept a booking. Every payment is
+                    encrypted and processed securely by Stripe.
+                  </p>
+                  <button type="button" class="payout__cta" data-coming-soon>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/></svg>
+                    Connect with <span class="payout__stripe">Stripe</span>
+                  </button>
+                  <ul class="payout__checklist">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                      You keep 95% of every booking &mdash; CRWN's platform fee is just 5%
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                      Payouts go straight to your bank account via Stripe
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                      A connected Stripe account is required before you can accept paid bookings
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
