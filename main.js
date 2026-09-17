@@ -68,6 +68,24 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
   });
 })();
 
+// "Coming soon" toast for the App Store / Google Play footer badges,
+// which don't link anywhere real yet.
+(function () {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+
+  let hideTimer;
+  document.querySelectorAll('[data-coming-soon]').forEach((badge) => {
+    badge.addEventListener('click', (e) => {
+      e.preventDefault();
+      toast.textContent = 'Coming soon';
+      toast.classList.add('is-visible');
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => toast.classList.remove('is-visible'), 2200);
+    });
+  });
+})();
+
 // Reveal sections as they enter the viewport
 const revealTargets = document.querySelectorAll('.reveal');
 
