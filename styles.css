@@ -666,7 +666,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ===== Your Business panel: real provider-app screenshots, layered ===== */
-.feature__media:has(.business-cards.is-active) .phone { display: none; }
+.feature__media:has(.business-cards.is-active) .phone,
+.feature__media:has(.payout-panel.is-active) .phone { display: none; }
 .business-cards {
   position: relative;
   width: 500px;
@@ -931,78 +932,105 @@ a { color: inherit; text-decoration: none; }
 }
 .phone__rows li span { color: var(--accent); font-weight: 500; font-size: 0.78rem; }
 
-/* ===== Payment tab: "connect with Stripe" panel ===== */
+/* ===== Payment tab: standalone "connect with Stripe" card ===== */
+.payout-panel.is-active { display: flex; justify-content: center; }
 .payout {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  min-height: 370px;
+  width: min(360px, 100%);
+  padding: 44px 34px 38px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 34px 64px -26px rgba(179, 93, 43, 0.28);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease);
+}
+.payout::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 200px;
+  background: radial-gradient(closest-side, rgba(201, 138, 44, 0.28), transparent 75%);
+  pointer-events: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .payout-panel:hover .payout { transform: translateY(-6px); }
 }
 .payout__logo {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 7px;
-  margin-bottom: 18px;
+  gap: 8px;
+  margin-bottom: 22px;
   color: #635bff;
 }
-.payout__logo svg { width: 20px; height: 20px; }
+.payout__logo svg { width: 24px; height: 24px; }
 .payout__logo span {
   font-family: var(--sans);
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 800;
   font-style: italic;
   color: #635bff;
   letter-spacing: -0.01em;
 }
-.payout__eyebrow { margin-bottom: 0.4rem; }
+.payout__eyebrow { position: relative; margin-bottom: 0.5rem; }
 .payout__title {
+  position: relative;
   font-family: var(--serif);
-  font-size: 1.3rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: var(--brick);
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 .payout__card {
+  position: relative;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid var(--line);
   background: linear-gradient(155deg, var(--bg-alt), #f6ecd8);
-  padding: 16px 10px;
-  margin-bottom: 18px;
+  padding: 22px 14px;
+  margin-bottom: 22px;
 }
-.payout__stats { display: flex; justify-content: center; gap: 32px; }
+.payout__stats { display: flex; justify-content: center; gap: 44px; }
 .payout__stat { display: flex; flex-direction: column; align-items: center; }
 .payout__stat-num {
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--maroon);
   line-height: 1;
 }
 .payout__stat-label {
   font-family: var(--sans);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  margin-top: 6px;
+  margin-top: 8px;
 }
 .payout__note {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 6px;
   background: color-mix(in srgb, var(--accent-2) 12%, var(--bg));
   border-radius: 999px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.7rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.75rem;
   color: var(--ink-soft);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
-.payout__note svg { width: 14px; height: 14px; flex: none; color: var(--accent-2); }
+.payout__note svg { width: 15px; height: 15px; flex: none; color: var(--accent-2); }
 .payout__cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1010,9 +1038,9 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
   border: none;
   border-radius: 999px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.8rem;
   font-family: var(--sans);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
