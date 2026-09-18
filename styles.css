@@ -1041,11 +1041,11 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  box-shadow: 0 16px 32px -14px rgba(179, 93, 43, 0.4);
+  box-shadow: 0 4px 20px rgba(179, 93, 43, 0.25);
 }
-.bookings-pill--maroon { background: var(--brown-dark); color: var(--bg); }
-.bookings-pill--cream { background: var(--bg); color: var(--maroon); }
-.bookings-pill--olive { background: var(--olive); color: var(--bg); }
+.bookings-pill--maroon { background: #fff; color: var(--brown-dark); }
+.bookings-pill--cream { background: #fff; color: var(--maroon); }
+.bookings-pill--olive { background: #fff; color: var(--olive); }
 .bookings-panel__image {
   display: block;
   width: 100%;
