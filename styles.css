@@ -933,14 +933,15 @@ a { color: inherit; text-decoration: none; }
 .phone__rows li span { color: var(--accent); font-weight: 500; font-size: 0.78rem; }
 
 /* ===== Payment tab: standalone "connect with Stripe" card ===== */
-.payout-panel.is-active { display: flex; justify-content: center; }
+.payout-panel.is-active { display: flex; justify-content: center; width: 100%; }
 .payout {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: min(360px, 100%);
+  width: 100%;
+  max-width: 460px;
   padding: 44px 34px 42px;
   background: var(--bg);
   border: 1px solid var(--line);
