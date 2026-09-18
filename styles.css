@@ -1040,7 +1040,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--accent);
+  background: #b35d2b;
   color: #fff;
   border-radius: 999px;
   padding: 0.65rem 1.3rem;
