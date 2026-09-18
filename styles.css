@@ -339,6 +339,7 @@ a { color: inherit; text-decoration: none; }
 .hero__cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .cta .hero__cta { margin-top: 2rem; }
+.cta .btn { padding: 0.65rem 1.25rem; }
 
 /* ===== Palette strip =====
    Each card is a fixed 174x232 per the Figma spec (not stretched to fill
