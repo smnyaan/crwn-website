@@ -667,7 +667,8 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== Your Business panel: real provider-app screenshots, layered ===== */
 .feature__media:has(.business-cards.is-active) .phone,
-.feature__media:has(.payout-panel.is-active) .phone { display: none; }
+.feature__media:has(.payout-panel.is-active) .phone,
+.feature__media:has(.calendar-panel.is-active) .phone { display: none; }
 .business-cards {
   position: relative;
   width: 500px;
@@ -1026,6 +1027,55 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.78rem;
   color: var(--ink-soft);
 }
+
+/* ===== Calendar tab: real availability-calendar screenshot ===== */
+.calendar-panel.is-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+.calendar-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.65rem 1.3rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 32px -14px rgba(179, 93, 43, 0.4);
+}
+.calendar-pill svg { width: 17px; height: 17px; flex: none; }
+.cal__image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  filter: drop-shadow(0 30px 55px -22px rgba(179, 93, 43, 0.35));
+  transition: transform 0.4s var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .calendar-panel:hover .cal__image { transform: translateY(-6px); }
+}
+.cal__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: var(--maroon);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cal__link svg { width: 24px; height: 24px; flex: none; }
 .payout__note svg { width: 15px; height: 15px; flex: none; color: var(--accent-2); }
 
 /* ===== Community ===== */
