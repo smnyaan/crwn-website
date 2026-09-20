@@ -1050,7 +1050,7 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.2s var(--ease), background-color 0.2s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 .bookings-pill svg { width: 19px; height: 19px; flex: none; }
-.bookings-pill--maroon { color: var(--brown-dark); box-shadow: 0 4px 20px rgba(60, 36, 23, 0.3); }
+.bookings-pill--maroon { color: var(--brown-dark); box-shadow: 0 4px 20px rgba(191, 74, 38, 0.25); }
 .bookings-pill--cream { color: var(--maroon); box-shadow: 0 4px 20px rgba(111, 35, 27, 0.25); }
 .bookings-pill--olive { color: var(--olive); box-shadow: 0 4px 20px rgba(138, 116, 64, 0.3); }
 @media (hover: hover) and (pointer: fine) {
