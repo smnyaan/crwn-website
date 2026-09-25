@@ -53,6 +53,17 @@
         <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
         <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.9" xChannelSelector="R" yChannelSelector="G" />
       </filter>
+      <!-- Mobile variants: headings render smaller there, so the same
+           displacement strength reads as noticeably rougher/harder to
+           read; use a lighter scale below the mobile breakpoint. -->
+      <filter id="rough-edge-mobile" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="rough-edge-sm-mobile" x="-20%" y="-40%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.3333333432674408 0.3333333432674408" numOctaves="3" seed="2028" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
     </defs>
   </svg>
 

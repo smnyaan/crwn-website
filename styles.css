@@ -1254,14 +1254,26 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
   }
   .feature__inner--reverse .feature__media { order: 2; }
+  /* Stacked layout: floating callout pills (phone-callout, negative
+     top offsets up to -66px) need real clearance from the text block
+     above them, or they overlap it at these in-between widths. */
+  .feature__inner, .feature__inner--reverse { row-gap: 6rem; }
 
   .feature__text { max-width: none; }
   .footer__bottom { flex-direction: column; gap: 0.5rem; }
 }
 
+/* Two-column layout is active here (>860px) but the container isn't
+   wide enough yet for phone-stack (448px) plus phone-callout--save's
+   full -50px right offset without spilling past the viewport edge. */
+@media (min-width: 861px) and (max-width: 1150px) {
+  .phone-callout--save { right: 0px; }
+}
+
 @media (max-width: 600px) {
-  .hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.6rem); }
+  .hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.6rem); filter: url(#rough-edge-mobile); }
   .hero h1 br { display: none; }
+  h2, .legal__head h1 { filter: url(#rough-edge-sm-mobile); }
 
   .palette { gap: 8px; }
   .style-card { width: calc(33.333% - 6px); }
