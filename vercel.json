@@ -11,6 +11,10 @@
     {
       "source": "/_expo/:path*",
       "destination": "https://crwn-web.vercel.app/_expo/:path*"
+    },
+    {
+      "source": "/vendor/:path*",
+      "destination": "https://crwn-web.vercel.app/vendor/:path*"
     }
   ]
 }
