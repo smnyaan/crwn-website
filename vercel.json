@@ -7,6 +7,10 @@
     {
       "source": "/app/:path*",
       "destination": "https://crwn-web.vercel.app/:path*"
+    },
+    {
+      "source": "/_expo/:path*",
+      "destination": "https://crwn-web.vercel.app/_expo/:path*"
     }
   ]
 }
