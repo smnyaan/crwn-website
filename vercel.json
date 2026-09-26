@@ -13,8 +13,8 @@
       "destination": "https://crwn-web.vercel.app/_expo/:path*"
     },
     {
-      "source": "/vendor/:path*",
-      "destination": "https://crwn-web.vercel.app/vendor/:path*"
+      "source": "/assets/:path*",
+      "destination": "https://crwn-web.vercel.app/assets/:path*"
     }
   ]
 }
