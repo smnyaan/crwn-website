@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/app",
+      "destination": "https://app.crwnhq.com",
+      "permanent": false
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "https://app.crwnhq.com/:path*",
+      "permanent": false
+    }
+  ]
+}
