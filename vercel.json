@@ -15,6 +15,10 @@
     {
       "source": "/assets/:path*",
       "destination": "https://crwn-web.vercel.app/assets/:path*"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "https://crwn-web.vercel.app/favicon.ico"
     }
   ]
 }
