@@ -40,21 +40,20 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
   });
 });
 
-// Mobile app banner: on iOS/Android, point visitors at the app store
+// Mobile app banner: on iOS, point visitors at the real App Store listing
 // instead of the web app, since a native app link makes more sense there.
-// Store URLs are placeholders until the apps are actually published.
+// Android is skipped until there's a real Play Store listing to link to.
 (function () {
   const banner = document.getElementById('appBanner');
   if (!banner) return;
 
   const ua = navigator.userAgent || '';
   const isIOS = /iPhone|iPad|iPod/i.test(ua);
-  const isAndroid = /Android/i.test(ua);
-  if (!isIOS && !isAndroid) return;
+  if (!isIOS) return;
   if (localStorage.getItem('crwn-app-banner-dismissed')) return;
 
   const link = document.getElementById('appBannerLink');
-  link.href = '#'; // TODO: replace with the real App Store / Play Store URL
+  link.href = 'https://apps.apple.com/us/app/crwn/id6806900748';
   banner.hidden = false;
 
   document.getElementById('appBannerClose').addEventListener('click', () => {
