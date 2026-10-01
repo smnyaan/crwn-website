@@ -85,6 +85,38 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
   });
 })();
 
+// In-page section links (nav, hero cards, TOC anchors): scroll without
+// leaving a #hash in the address bar. A link from another page still uses
+// the hash to land in the right spot on load, then the hash gets stripped
+// once we're there.
+(function () {
+  function targetFor(href) {
+    const hashIndex = href.indexOf('#');
+    if (hashIndex === -1) return null;
+    const id = href.slice(hashIndex + 1);
+    return id ? document.getElementById(id) : null;
+  }
+
+  document.querySelectorAll('a[href*="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const target = targetFor(link.getAttribute('href'));
+      if (!target) return; // not on this page — let the browser navigate normally
+
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(null, '', window.location.pathname);
+    });
+  });
+
+  if (window.location.hash) {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target) {
+      target.scrollIntoView();
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }
+})();
+
 // Reveal sections as they enter the viewport
 const revealTargets = document.querySelectorAll('.reveal');
 

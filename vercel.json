@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/app",
+      "destination": "https://crwn-web.vercel.app"
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "https://crwn-web.vercel.app/:path*"
+    },
+    {
+      "source": "/_expo/:path*",
+      "destination": "https://crwn-web.vercel.app/_expo/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "https://crwn-web.vercel.app/assets/:path*"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "https://crwn-web.vercel.app/favicon.ico"
+    }
+  ]
+}
