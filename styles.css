@@ -411,6 +411,68 @@ a { color: inherit; text-decoration: none; }
 .style-card--ochre  .style-image { box-shadow: 0 4px 50px 0 rgba(179, 93, 43, 0.53); }
 .style-card--maroon .style-image { box-shadow: 0 4px 50px 0 rgba(93, 31, 31, 0.53); }
 
+/* ===== Stories: click-to-play YouTube facades =====
+   The <img> thumbnail + play button stand in for the real embed until
+   clicked, so the page never pays the cost of loading YouTube's iframe
+   (and its trackers) for a video nobody plays. main.js swaps the button
+   out for an autoplaying iframe on click. */
+.stories__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.story-card { text-align: center; }
+.story-card__play {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--ink);
+  box-shadow: 0 24px 34px rgba(110, 54, 53, 0.25);
+  transition: transform 0.3s var(--ease);
+}
+.story-card__play:hover { transform: translateY(-6px); }
+.story-card__thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.story-card__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story-card__icon svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+.story-card__title {
+  margin: 14px 0 0;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+}
+.story-card__frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 820px) {
+  .stories__grid { grid-template-columns: 1fr; }
+}
+
 /* ===== Sections ===== */
 .section { padding: clamp(3.75rem, 8vw, 6.5rem) 0; }
 

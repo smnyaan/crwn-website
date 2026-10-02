@@ -117,6 +117,22 @@ document.querySelectorAll('[data-tab-group]').forEach((group) => {
   }
 })();
 
+// Stories: swap the thumbnail/play-button facade for a real YouTube iframe
+// on click, so the embed (and its trackers) only load once someone actually
+// wants to watch.
+document.querySelectorAll('.story-card__play').forEach((button) => {
+  button.addEventListener('click', () => {
+    const videoId = button.dataset.videoId;
+    const iframe = document.createElement('iframe');
+    iframe.className = 'story-card__frame';
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.title = button.getAttribute('aria-label') || 'YouTube video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    button.replaceWith(iframe);
+  });
+});
+
 // Reveal sections as they enter the viewport
 const revealTargets = document.querySelectorAll('.reveal');
 
