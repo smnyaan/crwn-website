@@ -1141,14 +1141,19 @@ a { color: inherit; text-decoration: none; }
 .store-badge svg { width: 16px; height: 16px; flex: none; }
 
 /* ===== Mobile app banner =====
-   Only shown on iOS/Android (via main.js), dismissible, remembers the
-   dismissal in localStorage. */
+   Only shown on iOS (via main.js), dismissible, remembers the dismissal
+   in localStorage. The media query below is a belt-and-suspenders
+   mobile-only gate so it never shows at desktop widths even if the
+   user-agent check misfires (e.g. an iPad set to "Request Desktop Site"). */
 .app-banner {
   position: sticky;
   top: 0;
   z-index: 60;
   background: var(--ink);
   color: #fff;
+}
+@media (min-width: 821px) {
+  .app-banner { display: none; }
 }
 .app-banner__inner {
   display: flex;
