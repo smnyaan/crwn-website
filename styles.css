@@ -416,6 +416,7 @@ a { color: inherit; text-decoration: none; }
    clicked, so the page never pays the cost of loading YouTube's iframe
    (and its trackers) for a video nobody plays. main.js swaps the button
    out for an autoplaying iframe on click. */
+.stories__sub { color: var(--maroon); }
 .stories__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -476,6 +477,7 @@ a { color: inherit; text-decoration: none; }
   margin: 14px 0 0;
   font-family: var(--serif);
   font-size: 1.3rem;
+  color: var(--maroon);
 }
 .story-card__frame {
   position: absolute;
